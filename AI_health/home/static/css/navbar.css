@@ -1,0 +1,41 @@
+
+
+.navbar {
+    width: 80vw;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: var(--theme-green-2);
+}
+
+.navbar_container {
+    width: inherit;
+    height: inherit;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar_items {
+    padding: 12px;
+}
+.navbar_items a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.navbar_items.left {
+    margin-left: 0;
+}
+
+.navbar_items.center {
+    margin: 0 auto;
+}
+
+.navbar_items.right {
+    margin-left: 0;
+}
+
+
+#img-logo {
+    width: 30px;
+}

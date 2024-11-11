@@ -1,0 +1,101 @@
+{% extends 'base_ui.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Chuẩn đoán bệnh - lựa chọn triệu chứng{% endblock %}</title>
+
+    {% block importCSS %}
+    <link rel="stylesheet" href="{% static 'css/select_page.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="selected-container">
+        <!-- Header -->
+        <div class="selected_header">
+            <span class="text text-black fz-26 w-700">Chọn triệu chứng</span>
+        </div>
+        <div class="dash-line das-color-theme"></div>
+        <!-- selected symptom list -->
+        <div id="selected_list" class="list lis-direction-row">
+            <!-- add symptom -->
+            <div id="plus-symptom" class="list-items end">
+                <img src="{% static 'imgs/plus-solid.svg' %}" alt="Plus">
+            </div>
+
+            <!-- <div class="selected_list_items list-items">
+                <span class="text fz-18 text-white">Tên triệu chứng A</span>
+                <div class="list_items_actions">
+                    <span>x</span>
+                </div>
+            </div> -->
+        </div>
+        <!-- selected action -->
+         <div id="selected-action">
+            <div class="btn-container btn-justify-center">
+                <div id="selected-btn" class="btn">Chuẩn đoán</div>
+            </div>
+         </div>
+    </div>
+    <!-- Choose Symptom display -->
+    <div id="select-overlay" class="over-display hiden bg-dark-0">
+        <div class="over_container bg-white-0">
+            <div class="header header-h-50">
+                <span class="header-text">
+                    Danh sách triệu chứng
+                </span>
+            </div>
+            <div class="dash-line das-color-theme"></div>
+            <div class="filter">
+                <div class="filter-option">
+                    <div class="filter-label">
+                        Phân theo bộ phận
+                    </div>
+                    <div class="filter-select">
+                        <select name="" id="filter">
+                            <option value="all">tất cả</option>
+                            <option value="b">Loại b</option>
+                            <option value="c">Loại c</option>
+                            <option value="d">Loại d</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="dash-line das-color-theme"></div>
+            <div id="select-form" class="list lis-direction-column">
+                <div class="list-items">
+                    <div class="form-options">
+                        <span class="text fz-18 w-500">Lựa chọn A</span>
+                    </div>
+                </div>
+                <div class="list-items">
+                    <div class="form-options">
+                        <span class="text fz-18 w-500">Lựa chọn B</span>
+                    </div>
+                </div>
+                <div class="list-items">
+                    <div class="form-options">
+                        <span class="text fz-18 w-500">Lựa chọn C</span>
+                    </div>
+                </div>
+            </div>
+            <div id="select-actions">
+                <div id="select-actions-submit" class="btn">
+                    <span class="text fz-20 text-white">OK</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block importJS %}
+    <script type="module" src="{% static 'js/select_page.js' %}"></script>
+    {% endblock %}
+</body>
+
+</html>

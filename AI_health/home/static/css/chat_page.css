@@ -1,0 +1,9 @@
+#chat {
+    width: 80vw;
+}
+
+
+#message-box {
+    background-color: black;
+    height: inherit;
+}

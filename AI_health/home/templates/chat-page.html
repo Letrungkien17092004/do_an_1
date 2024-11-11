@@ -1,0 +1,49 @@
+{% extends 'base_ui.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Chuẩn đoán bệnh - chat{% endblock %}</title>
+
+    {% block importCSS %}
+    <link rel="stylesheet" href="{% static 'css/chat_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/grid.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="width-80vw center-hoz">
+        <div class="container">
+            <!-- chat heading -->
+            <div class="header header-h-30">
+                <div class="text fz-20 text-black">
+                    Hãy mô tả các triệu chứng bạn gặp phải
+                </div>
+            </div>
+            <div class="dash-line das-w-80 das-color-theme center-hoz"></div>
+            <div class="container height-80vh">
+                <div id="message-box" class="height-inherit">
+                    <div class="grid">
+                        <div class="row dir-col">
+                            <div class="col">
+                                <div class="text fz-30 text-white">Test column</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block importJS %}
+    <script src="{% static 'js/chat_page.js' %}"></script>
+    {% endblock %}
+    
+</body>
+
+</html>

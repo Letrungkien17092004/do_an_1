@@ -1,0 +1,57 @@
+{% extends 'base_ui.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HUMG chuẩn đoán bệnh{% endblock %}</title>
+
+    <link rel="shortcut icon" href="{% static 'imgs/logo_humg.jpg' %}" type="image/x-icon">
+
+    {% block importCSS %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <main>
+        <section class="head">
+            <div class="head_text"><span>Bạn muốn làm gì ?</span></div>
+        </section>
+        <section class="options">
+            <div id="predict_option" class="options_items">
+                <span>Chuẩn đoán bệnh</span>
+            </div>
+            <div class="options_items">
+                <span>Hướng dẫn điều trị</span>
+            </div>
+        </section>
+    </main>
+
+    <div id="overDisplay" class="over_display hiden">
+        <div class="over_container">
+            <div class="over_header">
+                <span>chọn kiểu chuẩn đoán</span>
+            </div>
+            <div class="over_options">
+                <div class="over_options_items">
+                    <a href="prediction/chat/">chatBOT</a>
+                </div>
+                <div class="over_options_items">
+                    <a href="prediction/select/">chọn triệu trứng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block importJS %}
+    <script src="{% static 'js/home.js' %}"></script>
+    {% endblock %}
+
+</body>
+
+</html>

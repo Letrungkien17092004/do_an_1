@@ -1,0 +1,126 @@
+
+/* Selected list container */
+.selected-container {
+    margin: 0 auto;
+    width: 80vw;
+    min-height: 500px;
+    margin-top: 24px;
+}
+
+.selected_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.selected_list_items {
+    position: relative;
+    background-color: var(--theme-green-2);
+    margin: 6px 12px;
+    padding: 12px 6px;
+}
+
+.list_items_actions {
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: var(--theme-green-4);
+}
+
+#selected-action {
+    margin: 12px 0;
+}
+
+#selected-btn {
+    color: #fff;
+    background-color: var(--theme-green-4);
+    border-radius: 6px;
+}
+
+/* add action */
+#plus-symptom {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--theme-green-4);
+    margin: 6px 12px;
+    padding: 12px 6px;
+}
+
+#plus-symptom:hover {
+    border-color: var(--theme-green-1);
+}
+
+#plus-symptom img {
+    width: 15px;
+}
+
+
+
+
+/* Over Display */
+
+.over-display {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.over-display.hiden {
+    display: none !important;
+}
+
+.over_container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+}
+
+/* Select form */
+
+#select-form {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.form-options {
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-options:hover {
+    background-color: var(--theme-green-1);
+}
+
+.form-options.selected {
+    background-color: var(--theme-green-4);
+    color: #fff;
+}
+
+
+#select-actions {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+}
+
+#select-actions-submit {
+    cursor: pointer;
+    background-color: var(--theme-green-2);
+    border-radius: 6px;
+}

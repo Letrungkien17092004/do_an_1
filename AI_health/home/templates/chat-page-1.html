@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'css/chat_page.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top-container">
+                <div class="top_logo">
+                    <img src="{% static 'imgs/ai_avartar.png'%}" alt="Logo avartar">
+                </div>
+                <div class="top_greeting">
+                    <span>
+                        Hãy mô tả những vấn đề bạn gặp phải <br>
+                        chúng tôi sẽ giúp bạn
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="mid-container">
+                <div class="mid_chating">
+                    <div id="chating_list">
+                        <div class="message user-message">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, minima? Inventore, quam aut. Cupiditate voluptate officia asperiores excepturi assumenda deleniti dolorem rerum eaque fugiat, aliquid quos nulla ipsa qui similique!</p>
+                        </div>
+                    </div>
+                    <div id="input-chating">
+                        <div class="input_container">
+                            <textarea name="input-chat-input" id="input_area" placeholder="Nhập ở đây"></textarea>
+                            <div id="input_action">
+                                Gửi
+                            </div>
+                            <div id="loading" class="chat-loading hiden">
+                                <span>Vui lòng đợi trong giây lát...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Chuẩn đoán chỉ mang tính chất tham khảo. Để đảm bảo hãy đến cơ sở y tế gần nhất</span>
+        </div>
+    </div>
+    <script src="{% static 'js/chat_page.js' %}"></script>
+</body>
+
+</html>

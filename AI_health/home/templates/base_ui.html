@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'imgs/logo_humg.jpg' %}" type="image/x-icon">
+    <title>{% block title %} {% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'css/root.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    {% block importCSS %} {% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_container">
+            <div class="navbar_items left">
+                <a class="text fz-16" href="#">Trang trước</a>
+            </div>
+
+            
+            <div class="navbar_items center">
+                <span class="text text-white fz-18 w-700">HUMG disease prediction system</span>
+            </div>
+
+            <div class="navbar_items right">
+                <a href="/">
+                    <img id="img-logo" src="{% static 'imgs/house-solid.svg' %}" alt="Home">
+                </a>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="{% static 'js/navbar.js' %}"></script>
+    {% block importJS %} {% endblock %}
+</body>
+</html>
