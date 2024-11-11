@@ -47,6 +47,10 @@ html {
     height: 80vh;
 }
 
+.height-100vh {
+    height: 100vh;
+}
+
 .height-inherit {
     height: inherit;
 }
@@ -69,6 +73,10 @@ html {
 
 .bg-white-0 {
     background-color: aliceblue;
+}
+
+.bg-green-4 {
+    background-color: var(--theme-green-4);
 }
 
 /* Text */
@@ -248,4 +256,54 @@ html {
 
 .filter-label {
     margin-right: 6px;
+}
+
+
+/* Flexbox */
+
+.flex {
+    display: flex;
+}
+
+/* Flex direction */
+.flex.flex-dir-row {
+    flex-direction: row;
+}
+
+.flex.flex-dir-column {
+    flex-direction: column;
+}
+
+/* justify and align */
+.flex.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex.flex-justify-start {
+    justify-content: flex-start;
+}
+
+.flex.flex-justify-center {
+    justify-content: center;
+}
+
+.flex.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.flex.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex.flex-align-center {
+    align-items: center;
+}
+
+.flex.flex-align-end {
+    align-items: flex-end;
+}
+
+/* flex ajust item */
+.flex .flex-grow-1 {
+    flex-grow: 1;
 }

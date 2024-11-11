@@ -2,8 +2,33 @@
     width: 80vw;
 }
 
-
 #message-box {
-    background-color: black;
+    background-color: var(--theme-blue-2);
     height: inherit;
+    padding: 12px 18px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 24px;
+    padding: 6px 12px;
+    background-color: var(--theme-blue-4);
+    border-radius: 6px;
+}
+
+.message.user {
+    max-width: 400px;
+}
+
+.message.bot {
+    max-width: 800px;
+}
+
+#input-area {
+    resize: none;
+    outline: none;
+    font-size: 1.6rem;
+    background-color: transparent;
+    height: 20px;
+    border: none;
 }

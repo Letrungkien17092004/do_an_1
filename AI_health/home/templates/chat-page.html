@@ -25,12 +25,40 @@
                 </div>
             </div>
             <div class="dash-line das-w-80 das-color-theme center-hoz"></div>
-            <div class="container height-80vh">
-                <div id="message-box" class="height-inherit">
-                    <div class="grid">
+            <div class="container height-100vh">
+                <div id="message-box" class="height-inherit flex flex-dir-column">
+                    <!-- message -->
+                    <div class="grid flex-grow-1">
                         <div class="row dir-col">
-                            <div class="col">
-                                <div class="text fz-30 text-white">Test column</div>
+                            <!-- user message -->
+                            <div class="col col-right">
+                                <div class="message user">
+                                    <div class="text fz-16 text-white w-600">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Amet tenetur praesentium voluptatem, consequuntur hic,
+                                        exercitationem, blanditiis deserunt magni nemo quam quis quo laudantium beatae
+                                        sint. Sapiente consequatur omnis vel neque!</div>
+                                </div>
+                            </div>
+
+                            <div class="col col-left">
+                                <div class="message bot">
+                                    <div class="text fz-16 text-white w-600">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Amet tenetur praesentium voluptatem, consequuntur hic,
+                                        exercitationem, blanditiis deserunt magni nemo quam quis quo laudantium beatae
+                                        sint. Sapiente consequatur omnis vel neque!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="flex flex-center">
+                            <div id="input-container" class="flex">
+                                <textarea name="input" id="input-area"></textarea>
+                                <div id="input-action">
+                                    <div class="btn bg-green-4">
+                                        <div class="text fz-16 text-white">Gửi</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -43,7 +71,7 @@
     {% block importJS %}
     <script src="{% static 'js/chat_page.js' %}"></script>
     {% endblock %}
-    
+
 </body>
 
 </html>
