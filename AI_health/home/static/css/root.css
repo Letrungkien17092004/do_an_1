@@ -29,10 +29,18 @@ html {
     font-size: 10px;
 }
 
+/* border radius */
+.border-radius-6 {
+    border-radius: 6px;
+}
 /* W - H */
 
 .width-80vw {
     width: 80vw;
+}
+
+.width-80 {
+    width: 80%;
 }
 
 .width-100vw {
@@ -73,6 +81,10 @@ html {
 
 .bg-white-0 {
     background-color: aliceblue;
+}
+
+.bg-green-2 {
+    background-color: var(--theme-green-2);
 }
 
 .bg-green-4 {

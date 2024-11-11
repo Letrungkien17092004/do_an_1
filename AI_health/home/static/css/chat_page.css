@@ -24,6 +24,10 @@
     max-width: 800px;
 }
 
+#input-container {
+    padding: 12px 16px;
+    border-radius: 6px;
+}
 #input-area {
     resize: none;
     outline: none;
