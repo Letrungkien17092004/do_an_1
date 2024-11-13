@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_POST, require_GET
 from django.views.decorators.csrf import csrf_exempt
 import json
-from DiseaseSystem.diseasePredictSys import DiseasePredictSys, Translator
+from DiseaseSystem.diseasePredictSys import DiseasePredictSys
 
 @require_GET
 def home(request):
