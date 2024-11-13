@@ -26,11 +26,27 @@ export class PredictTypeSelect extends PredictionDiseaseSystem {
         this.submitBtn = submitBtn
     }
 
+    load() {
+        this.submitBtn.addEventListener("click", this.submitEvent())
+    }
+
     // JS DOM Event
     submitEvent() {
         let thisParent = this
         return function(event) {
-            console.log(thisParent.selectedList.getItem())
+            let values =thisParent.selectedList.getValues()
+            thisParent.predict(values)
         }
+    }
+
+    async predict(raw_inp) {
+        const res = await fetch(this.url, {
+            method: "POST",
+            body: JSON.stringify(raw_inp)
+        })
+
+        let data = await res.json()
+        console.log(data.message)
+        return data.message
     }
 }

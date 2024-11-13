@@ -19,17 +19,17 @@ export class ListUI {
         return this.items = document.querySelectorAll(`.${this.#classItem}`)
     }
 
-    getContentItem() {
+    getValues() {
+        var values = []
         var items = this.getItem()
-        var listContent = []
         items.forEach((item) => {
-            listContent.push(item.innerHTML)
+            values.push(item.getAttribute("data-value"))
         })
 
-        return listContent
+        return values
     }
     
-    addItem(text) {
+    addItem(text, value) {
         var newItem = document.createElement("div")
         var textElm = document.createElement("div")
         var actionElm = document.createElement("div")
@@ -39,7 +39,7 @@ export class ListUI {
 
         actionElm.className = "list_items_actions"
         actionElm.innerHTML = "<span>x</span>"
-
+        newItem.setAttribute("data-value", value)
         newItem.className = `${this.#classItem} ${this.#baseChild}`
         newItem.appendChild(textElm)
         newItem.appendChild(actionElm)

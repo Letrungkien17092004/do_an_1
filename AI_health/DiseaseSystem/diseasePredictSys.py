@@ -3,16 +3,16 @@ import joblib
 import json
 import pandas as pd
 import numpy as np
-
+import os
 # Tạo đối tượng Hệ Thống Chuẩn Đoán bệnh
 class DiseasePredictSys:
     # Hàm khởi tạo với các thuộc tính như bên dưới
     def __init__(self):
-        self.model_link = "./pre_trained_model/decisionTreeDisease.joblib" # tên model sẽ dùng
-        self.engLabel_link = "./data/engDisease.json" # File nhãn dữ liệu ví dụ {0: Bệnh A, 1: Bệnh B}
-        self.viLabel_link = "./data/viDisease.json" # File nhãn dữ liệu ví dụ {0: Bệnh A, 1: Bệnh B}
-        self.engSymptoms_link = "./data/engSymptoms.json" # File triệu chứng tiếng anh
-        self.viSymptoms_link = "./data/viSymptoms.json" # File triệu chứng tiếng việt
+        self.model_link = "./DiseaseSystem/pre_trained_model/decisionTreeDisease.joblib" # tên model sẽ dùng
+        self.engLabel_link = "./DiseaseSystem/data/engDisease.json" # File nhãn dữ liệu ví dụ {0: Bệnh A, 1: Bệnh B}
+        self.viLabel_link = "./DiseaseSystem/data/viDisease.json" # File nhãn dữ liệu ví dụ {0: Bệnh A, 1: Bệnh B}
+        self.engSymptoms_link = "./DiseaseSystem/data/engSymptoms.json" # File triệu chứng tiếng anh
+        self.viSymptoms_link = "./DiseaseSystem/data/viSymptoms.json" # File triệu chứng tiếng việt
         self.model = None # Model
         self.engLabel = None # eng label
         self.viLabel = None # vie label
@@ -22,6 +22,8 @@ class DiseasePredictSys:
         
     # Hàm load cần phải load trước khi có thể sử dụng bất kỳ chức năng nào của
     # hệ thống chuẩn đoán bệnh
+    def debug(self):
+        print(os.getcwd())
     def load(self):
         print("waiting for loading Model, data and more...")
         self.model = joblib.load(self.model_link)

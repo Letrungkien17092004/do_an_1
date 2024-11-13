@@ -36,21 +36,20 @@ class InputManager {
     async loadSelectOption() {
         const symptoms = await this.loadJson("/static/json/categories.json")
         symptoms.forEach((symptom) => {
-            let baseChild = document.createElement("div")
-            let baseText = document.createElement("span")
+            let listItem = document.createElement("div")
             let newOption = document.createElement("div")
-            newOption.value_symptom = "a"
-            baseChild.className = "form-options"
-            baseText.className = "text fz-18 w-500"
-
-            newOption.className = "list-items"
+            let text = document.createElement("span")
+            listItem.className = "list-items"
+            newOption.className = "form-options"
+            text.className = "text fz-18 w-500"
+            
             newOption.setAttribute("data-value", symptom.value)
             newOption.setAttribute("data-type", symptom.type)
-            baseText.innerHTML = symptom.word
+            text.innerHTML = symptom.word
 
-            baseChild.appendChild(baseText)
-            newOption.appendChild(baseChild)
-            this.form.appendChild(newOption)
+            newOption.appendChild(text)
+            listItem.appendChild(newOption)
+            this.form.appendChild(listItem)
         })
         const optionHasLoaded = this.getOptions()
         optionHasLoaded.forEach((option) => {
@@ -80,19 +79,19 @@ class InputManager {
     }
 
     updateOption(event) {
-        const listItems = document.querySelectorAll("#select-form .list-items")
+        const options = document.querySelectorAll(".form-options")
         const filterValue = this.filter.value
         if (filterValue == "all") {
-            listItems.forEach((listItem) => {
-                listItem.className = "list-items"
+            options.forEach((option) => {
+                option.style.display = "flex"
             })
             return
         }
-        listItems.forEach((listItem) => {
-            if (listItem.getAttribute("data-type") == filterValue) {
-                listItem.className = "list-items"
+        options.forEach((option) => {
+            if (option.getAttribute("data-type") == filterValue) {
+                option.style.display = "flex"
             } else {
-                listItem.className = "list-items hiden"
+                option.style.display = "none"
             }
         })
     }
@@ -114,7 +113,7 @@ class InputManager {
             let selecteds = thisParent.getSelected()
             // add symptom
             selecteds.forEach((selected) => {
-                thisParent.listUI.addItem(selected.innerText)
+                thisParent.listUI.addItem(selected.innerText, selected.getAttribute("data-value"))
             })
 
             // reste selected
@@ -151,7 +150,8 @@ const inputManager = new InputManager({
 
 const predictSystem = new PredictTypeSelect({
     url: '/api/select',
-    selectedList: selectedList
+    selectedList: selectedList,
+    submitBtn: document.getElementById("selected-btn")
 })
 
 window.addEventListener("load", (event) => {
@@ -160,4 +160,5 @@ window.addEventListener("load", (event) => {
     inputManager.load()
     inputManager.loadFilter()
     inputManager.loadSelectOption()
+    predictSystem.load()
 })

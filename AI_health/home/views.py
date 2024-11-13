@@ -5,6 +5,9 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from DiseaseSystem.diseasePredictSys import DiseasePredictSys
 
+diseasePredictSys = DiseasePredictSys()
+diseasePredictSys.load()
+
 @require_GET
 def home(request):
     return render(request, "home.html", {})
@@ -30,9 +33,9 @@ def messageHandler(request):
 @require_POST
 @csrf_exempt
 def selectHandler(request):
-    body = json.loads(request.body)
-    print(body)
+    raw_inp = json.loads(request.body)
+    result = diseasePredictSys.diseasePredict(raw_inp, predType="select")
     res = {
-        "message": "api select đã nhận và phản hồi lại thôn báo này"
+        "message": result
     }
     return JsonResponse(res)
