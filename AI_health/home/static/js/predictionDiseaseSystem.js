@@ -5,17 +5,17 @@ class PredictionDiseaseSystem {
         this.url = url
     }
 
-    async predictServer(input) {
-        let response = await fetch(`${this.url}`, {
+    async predictServer(raw_inp) {
+        const res = await fetch(this.url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                input: input
-            })
+            body: JSON.stringify(raw_inp)
         })
-        return await response.json()
+        let data = await res.json()
+        window.alert(data.message)
+        return data.message
     }
 }
 
@@ -34,19 +34,8 @@ export class PredictTypeSelect extends PredictionDiseaseSystem {
     submitEvent() {
         let thisParent = this
         return function(event) {
-            let values =thisParent.selectedList.getValues()
-            thisParent.predict(values)
+            let values = thisParent.selectedList.getValues()
+            thisParent.predictServer(values)
         }
-    }
-
-    async predict(raw_inp) {
-        const res = await fetch(this.url, {
-            method: "POST",
-            body: JSON.stringify(raw_inp)
-        })
-
-        let data = await res.json()
-        console.log(data.message)
-        return data.message
     }
 }

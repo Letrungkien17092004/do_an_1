@@ -29,7 +29,7 @@ export class ListUI {
         return values
     }
     
-    addItem(text, value) {
+    addItem({text, attributeKeyData}) {
         var newItem = document.createElement("div")
         var textElm = document.createElement("div")
         var actionElm = document.createElement("div")
@@ -37,12 +37,24 @@ export class ListUI {
         textElm.className = "text fz-18 text-white"
         textElm.innerHTML = text
 
-        actionElm.className = "list_items_actions"
+        actionElm.className = "list_items_actions text fz-16"
         actionElm.innerHTML = "<span>x</span>"
-        newItem.setAttribute("data-value", value)
+        actionElm.addEventListener("click", this.removeEvent())
+        attributeKeyData.forEach((item) => {
+            newItem.setAttribute(`data-${item.key}`, item.value)
+        })
         newItem.className = `${this.#classItem} ${this.#baseChild}`
         newItem.appendChild(textElm)
         newItem.appendChild(actionElm)
         this.list.appendChild(newItem)
+    }
+
+    // JS DOM Event
+    removeEvent() {
+        var thisParent = this
+        return function(event) {
+            event.stopPropagation()
+            this.closest(".selected_list_items").remove()
+        }
     }
 }

@@ -29,6 +29,15 @@ html {
     font-size: 10px;
 }
 
+/* Display */
+.hiden {
+    display: none !important;
+}
+
+.block {
+    display: block !important;
+}
+
 /* border radius */
 .border-radius-6 {
     border-radius: 6px;
