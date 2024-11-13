@@ -199,6 +199,10 @@ html {
     width: 100%;
 }
 
+.list-items.hiden {
+    display: none !important;
+}
+
 
 /* Button */
 

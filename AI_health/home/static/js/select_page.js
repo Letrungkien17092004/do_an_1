@@ -3,11 +3,12 @@ import { ListUI } from './listUI.js'
 import { PredictTypeSelect } from './predictionDiseaseSystem.js'
 
 class InputManager {
-    constructor({ formId, optionClass, btnAddId, listId, overlay, listUI }) {
+    constructor({ formId, optionClass, btnAddId, listId, filterId,overlay, listUI }) {
         this.formId = formId
         this.optionClass = optionClass
         this.btnAddId = btnAddId
         this.listId = listId
+        this.filterId = filterId
         this.overlay = overlay
         this.listUI = listUI
     }
@@ -17,12 +18,56 @@ class InputManager {
         this.options = document.querySelectorAll(`.${this.optionClass}`)
         this.btnAdd = document.getElementById(this.btnAddId)
         this.list = document.getElementById(this.listId)
+        this.filter = document.getElementById(this.filterId)
         this.addEvent()
+    }
+
+    async loadFilter() {
+        const types = await this.loadJson("/static/json/types.json")
+        const filterSelect = document.getElementById("filter-select")
+        for (let i = 0; i < types.length; i++) {
+            let newOption = document.createElement("option")
+            newOption.value = types[i]
+            newOption.innerHTML = types[i]
+            filterSelect.appendChild(newOption)
+        }
+    }
+
+    async loadSelectOption() {
+        const symptoms = await this.loadJson("/static/json/categories.json")
+        symptoms.forEach((symptom) => {
+            let baseChild = document.createElement("div")
+            let baseText = document.createElement("span")
+            let newOption = document.createElement("div")
+            newOption.value_symptom = "a"
+            baseChild.className = "form-options"
+            baseText.className = "text fz-18 w-500"
+
+            newOption.className = "list-items"
+            newOption.setAttribute("data-value", symptom.value)
+            newOption.setAttribute("data-type", symptom.type)
+            baseText.innerHTML = symptom.word
+
+            baseChild.appendChild(baseText)
+            newOption.appendChild(baseChild)
+            this.form.appendChild(newOption)
+        })
+        const optionHasLoaded = this.getOptions()
+        optionHasLoaded.forEach((option) => {
+            option.addEventListener("click", this.markSelectedEvent)
+        })
+    }
+
+    async loadJson(url) {
+        var res = await fetch(url, {
+            method: "GET"
+        })
+        return await res.json()
     }
 
     getSelected() {
         var selecteds = []
-        this.options.forEach((option) => {
+        this.getOptions().forEach((option) => {
             if (option.classList.contains("selected")) {
                 selecteds.push(option)
             }
@@ -30,13 +75,31 @@ class InputManager {
         return selecteds
     }
 
-    addEvent() {
-        // event click to select options
-        this.options.forEach((option) => {
-            option.addEventListener("click", this.markSelectedEvent)
-        })
+    getOptions() {
+        return document.querySelectorAll(`.${this.optionClass}`)
+    }
 
+    updateOption(event) {
+        const listItems = document.querySelectorAll("#select-form .list-items")
+        const filterValue = this.filter.value
+        if (filterValue == "all") {
+            listItems.forEach((listItem) => {
+                listItem.className = "list-items"
+            })
+            return
+        }
+        listItems.forEach((listItem) => {
+            if (listItem.getAttribute("data-type") == filterValue) {
+                listItem.className = "list-items"
+            } else {
+                listItem.className = "list-items hiden"
+            }
+        })
+    }
+
+    addEvent() {
         this.btnAdd.addEventListener("click", this.addSymptomEvent(this))
+        this.filter.addEventListener("change", this.updateOption.bind(this))
     }
 
     // JS DOM Event
@@ -60,7 +123,6 @@ class InputManager {
             })
 
             thisParent.overlay.hiden()
-
         }
     }
 }
@@ -82,6 +144,7 @@ const inputManager = new InputManager({
     optionClass: "form-options",
     btnAddId: "select-actions-submit",
     listId: "select_list",
+    filterId: "filter-select",
     overlay: overlay,
     listUI: selectedList
 })
@@ -95,4 +158,6 @@ window.addEventListener("load", (event) => {
     overlay.load()
     selectedList.load()
     inputManager.load()
+    inputManager.loadFilter()
+    inputManager.loadSelectOption()
 })
