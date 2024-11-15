@@ -1,19 +1,10 @@
-const overDisplay = document.getElementById("overDisplay")
-const predictOption = document.getElementById("predict_option")
+import { OverlayDisplay } from "./overlay_display.js"
 
-
-predictOption.addEventListener("click", (event) => {
-    event.stopPropagation()
-    if (overDisplay.classList.contains("hiden")) {
-        overDisplay.classList.remove("hiden")
-    }
+const overDisplay = new OverlayDisplay({
+    activationId: "predict_option",
+    overlayId: "choosePredictType"
 })
 
-overDisplay.addEventListener("click", (event) => {
-    event.stopPropagation()
-    if (event.target == overDisplay) {
-        if (!overDisplay.classList.contains("hiden")) {
-            overDisplay.classList.add("hiden")
-        }
-    }
+window.addEventListener("load", (event) => {
+    overDisplay.load()
 })

@@ -14,7 +14,7 @@ const selectedList = new ListUI({
     listId: "selected_list",
     classItem: "selected_list_items",
     baseParent: "list lis-direction-row",
-    baseChild: "list-items"
+    baseChild: "list-items text text-align-center"
 })
 
 const symptomSelection = new SelectionManager({

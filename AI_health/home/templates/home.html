@@ -17,24 +17,33 @@
 
 <body>
     {% block content %}
-    <main>
-        <section class="head">
-            <div class="head_text"><span>Bạn muốn làm gì ?</span></div>
-        </section>
-        <section class="options">
-            <div id="predict_option" class="options_items">
-                <span>Chuẩn đoán bệnh</span>
-            </div>
-            <div class="options_items">
-                <span>Hướng dẫn điều trị</span>
-            </div>
-        </section>
-    </main>
+    <!-- Header -->
+    <div class="header margin-t-24 width-80vw center-hoz">
+        <div class="text fz-30 text-black">Bạn muốn làm gì ?</div>
+    </div>
 
-    <div id="overDisplay" class="over_display hiden">
+    <!-- option list -->
+     <div class="container width-80vw center-hoz">
+        <div class="list lis-direction-column width-fit center-hoz margin-t-24">
+            <div id="predict_option" class="list-items btn-effect btn-effect-grow padding-all-12 margin-t-12 border-radius-6 bg-green-2">
+                <div class="text fz-20 text-white text-align-center">Chuẩn đoán bệnh</div>
+            </div>
+            <div class="list-items btn-effect btn-effect-grow padding-all-12 margin-t-12 border-radius-6 bg-green-2">
+                <div class="text fz-20 text-white text-align-center">Tra cứu thông tin bệnh</div>
+            </div>
+            <div class="list-items btn-effect btn-effect-grow padding-all-12 margin-t-12 border-radius-6 bg-green-2">
+                <div class="text fz-20 text-white text-align-center">Nhận diện bệnh bằng hình ảnh</div>
+            </div>
+        </div>
+     </div>
+
+    <!-- Overlay -->
+    <div id="choosePredictType" class="over_display">
         <div class="over_container">
-            <div class="over_header">
-                <span>chọn kiểu chuẩn đoán</span>
+            <div class="header margin-t-12">
+                <div class="text fz-26 text-black text-align-center">
+                    Chọn kiểu chuẩn đoán
+                </div>
             </div>
             <div class="over_options">
                 <div class="over_options_items">
@@ -49,7 +58,7 @@
     {% endblock %}
 
     {% block importJS %}
-    <script src="{% static 'js/home.js' %}"></script>
+    <script type="module" src="{% static 'js/home.js' %}"></script>
     {% endblock %}
 
 </body>

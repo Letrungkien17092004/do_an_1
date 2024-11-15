@@ -19,6 +19,8 @@
     background-color: var(--theme-green-2);
     margin: 6px 12px;
     padding: 12px 6px;
+    min-width: 150px;
+    border-radius: 6px;
 }
 
 .list_items_actions {
@@ -41,6 +43,7 @@
 
 /* add action */
 #plus-symptom {
+    min-width: 150px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -48,6 +51,7 @@
     border: 3px solid var(--theme-green-4);
     margin: 6px 12px;
     padding: 12px 6px;
+    border-radius: 6px;
 }
 
 #plus-symptom:hover {
