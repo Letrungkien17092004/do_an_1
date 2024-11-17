@@ -9,7 +9,7 @@
     <title>{% block title %}Chuẩn đoán bệnh - lựa chọn triệu chứng{% endblock %}</title>
 
     {% block importCSS %}
-    <link rel="stylesheet" href="{% static 'css/select_page.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/select_page.css' %}">
     {% endblock %}
 </head>
 
@@ -25,7 +25,7 @@
         <div id="selected_list" class="list lis-direction-row">
             <!-- add symptom -->
             <div id="plus-symptom" class="list-items end">
-                <img src="{% static 'imgs/plus-solid.svg' %}" alt="Plus">
+                <img src="{% static 'app/imgs/plus-solid.svg' %}" alt="Plus">
             </div>
 
             <!-- <div class="selected_list_items list-items">
@@ -83,7 +83,7 @@
     {% endblock %}
 
     {% block importJS %}
-    <script type="module" src="{% static 'js/select_page.js' %}"></script>
+    <script type="module" src="{% static 'app/js/select_page.js' %}"></script>
     {% endblock %}
 </body>
 

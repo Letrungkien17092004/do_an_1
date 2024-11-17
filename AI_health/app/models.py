@@ -40,6 +40,7 @@ class Diseases(models.Model):
     searchName = models.CharField(max_length=100)
     discription = models.TextField(max_length=1000)
     postLinks = models.JSONField(null=True, blank=True)
+    index = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name

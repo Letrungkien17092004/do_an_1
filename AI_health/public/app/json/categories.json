@@ -1,0 +1,662 @@
+[
+    {
+        "word": "ng\u1ee9a",
+        "type": "da",
+        "value": "itching"
+    },
+    {
+        "word": "ph\u00e1t ban da",
+        "type": "da",
+        "value": "skin_rash"
+    },
+    {
+        "word": "n\u1ed5i h\u1ea1ch",
+        "type": "da",
+        "value": "nodal_skin_eruptions"
+    },
+    {
+        "word": "h\u1eaft h\u01a1i",
+        "type": "m\u0169i",
+        "value": "continuous_sneezing"
+    },
+    {
+        "word": "run",
+        "type": "da",
+        "value": "shivering"
+    },
+    {
+        "word": "\u1edbn l\u1ea1nh",
+        "type": "kh\u00e1c",
+        "value": "chills"
+    },
+    {
+        "word": "\u0111au kh\u1edbp, nh\u1ee9c kh\u1edbp",
+        "type": "x\u01b0\u01a1ng kh\u1edbp",
+        "value": "joint_pain"
+    },
+    {
+        "word": "\u0111au d\u1ea1 d\u00e0y",
+        "type": "h\u1ec7 ti\u00eau h\u00f3a",
+        "value": "stomach_pain"
+    },
+    {
+        "word": "axit d\u1ea1 d\u00e0y",
+        "type": "kh\u00e1c",
+        "value": "acidity"
+    },
+    {
+        "word": "lo\u00e9t mi\u1ec7ng",
+        "type": "mi\u1ec7ng",
+        "value": "ulcers_on_tongue"
+    },
+    {
+        "word": "g\u1ea7y g\u00f2, c\u00f2i",
+        "type": "c\u01a1",
+        "value": "muscle_wasting"
+    },
+    {
+        "word": "n\u00f4n, m\u1eeda, \u00f3i",
+        "type": "kh\u00e1c",
+        "value": "vomiting"
+    },
+    {
+        "word": "\u0111\u00e1i r\u1eaft, ti\u1ec3u bu\u1ed1t",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "burning_micturition"
+    },
+    {
+        "word": "\u0111\u00e1i ra m\u00e1u",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "spotting_ urination"
+    },
+    {
+        "word": "m\u1ec7t m\u1ecfi, ki\u1ec7t s\u1ee9c, stress",
+        "type": "tinh th\u1ea7n",
+        "value": "fatigue"
+    },
+    {
+        "word": "t\u0103ng c\u00e2n, m\u1eadp l\u00ean",
+        "type": "c\u00e2n n\u1eb7ng",
+        "value": "weight_gain"
+    },
+    {
+        "word": "c\u0103ng th\u1eb3ng, lo l\u1eafng",
+        "type": "tinh th\u1ea7n",
+        "value": "anxiety"
+    },
+    {
+        "word": "l\u1ea1nh tay l\u1ea1nh ch\u00e2n",
+        "type": "ch\u00e2n tay",
+        "value": "cold_hands_and_feets"
+    },
+    {
+        "word": "t\u00e2m tr\u1ea1ng b\u1ea5t \u1ed5n",
+        "type": "tinh th\u1ea7n",
+        "value": "mood_swings"
+    },
+    {
+        "word": "gi\u1ea3m c\u00e2n, g\u1ea7y \u0111i",
+        "type": "kh\u00e1c",
+        "value": "weight_loss"
+    },
+    {
+        "word": "t\u0103ng \u0111\u1ed9ng, k\u00edch \u0111\u1ed9ng",
+        "type": "tinh th\u1ea7n",
+        "value": "restlessness"
+    },
+    {
+        "word": "l\u1edd \u0111\u1edd, u\u1ec3 o\u1ea3i",
+        "type": "tinh th\u1ea7n",
+        "value": "lethargy"
+    },
+    {
+        "word": "amidan, n\u1ea5m h\u1ecdng",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "patches_in_throat"
+    },
+    {
+        "word": "\u0111\u01b0\u1eddng huy\u1ebft kh\u00f4ng \u1ed5n \u0111\u1ecbnh",
+        "type": "tim m\u1ea1ch",
+        "value": "irregular_sugar_level"
+    },
+    {
+        "word": "ho",
+        "type": "h\u00f4 h\u1ea5p",
+        "value": "cough"
+    },
+    {
+        "word": "s\u1ed1t, s\u1ed1t cao",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "high_fever"
+    },
+    {
+        "word": "m\u1eaft s\u00e2u, m\u1eaft th\u00e2m",
+        "type": "m\u1eaft",
+        "value": "sunken_eyes"
+    },
+    {
+        "word": "kh\u00f3 th\u1edf",
+        "type": "h\u00f4 h\u1ea5p",
+        "value": "breathlessness"
+    },
+    {
+        "word": "\u0111\u1ed5 m\u1ed3 h\u00f4i",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "sweating"
+    },
+    {
+        "word": "m\u1ea5t n\u01b0\u1edbc, s\u1ee5t n\u01b0\u1edbc",
+        "type": "n\u01b0\u1edbc",
+        "value": "dehydration"
+    },
+    {
+        "word": "kh\u00f3 ti\u00eau, ti\u00eau h\u00f3a k\u00e9m",
+        "type": "h\u1ec7 ti\u00eau h\u00f3a",
+        "value": "indigestion"
+    },
+    {
+        "word": "\u0111au \u0111\u1ea7u, nh\u1ee9c \u0111\u1ea7u",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "headache"
+    },
+    {
+        "word": "v\u00e0ng da",
+        "type": "da",
+        "value": "yellowish_skin"
+    },
+    {
+        "word": "n\u01b0\u1edbc ti\u1ec3u s\u1eabm m\u00e0u",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "dark_urine"
+    },
+    {
+        "word": "bu\u1ed3n n\u00f4n, m\u1eafc \u00f3i",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "nausea"
+    },
+    {
+        "word": "ch\u00e1n \u0103n, kh\u00f4ng th\u00e8m \u0103n",
+        "type": "\u0103n v\u00e0 u\u1ed1ng",
+        "value": "loss_of_appetite"
+    },
+    {
+        "word": "\u0111au m\u1eaft, nh\u1ee9c m\u1eaft",
+        "type": "m\u1eaft",
+        "value": "pain_behind_the_eyes"
+    },
+    {
+        "word": "\u0111au l\u01b0ng",
+        "type": "l\u01b0ng",
+        "value": "back_pain"
+    },
+    {
+        "word": "t\u00e1o b\u00f3n",
+        "type": "kh\u00e1c",
+        "value": "constipation"
+    },
+    {
+        "word": "\u0111au b\u1ee5ng d\u01b0\u1edbi",
+        "type": "b\u1ee5ng",
+        "value": "abdominal_pain"
+    },
+    {
+        "word": "ti\u00eau ch\u1ea3y",
+        "type": "ti\u00eau h\u00f3a",
+        "value": "diarrhoea"
+    },
+    {
+        "word": "s\u1ed1t nh\u1eb9",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "mild_fever"
+    },
+    {
+        "word": "n\u01b0\u1edbc ti\u1ec3u v\u00e0ng, ti\u1ec3u v\u00e0ng",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "yellow_urine"
+    },
+    {
+        "word": "v\u00e0ng m\u1eaft",
+        "type": "m\u1eaft",
+        "value": "yellowing_of_eyes"
+    },
+    {
+        "word": "suy gan c\u1ea5p, suy gan",
+        "type": "gan",
+        "value": "acute_liver_failure"
+    },
+    {
+        "word": "t\u00edch n\u01b0\u1edbc, c\u01a1 th\u1ec3 nhi\u1ec1u n\u01b0\u1edbc",
+        "type": "n\u01b0\u1edbc",
+        "value": "fluid_overload"
+    },
+    {
+        "word": "\u0111\u1ea7y b\u1ee5ng",
+        "type": "ti\u00eau h\u00f3a",
+        "value": "swelling_of_stomach"
+    },
+    {
+        "word": "h\u1ea1ch b\u1ea1ch huy\u1ebft, h\u1ea1ch \u0111\u1ecf",
+        "type": "da",
+        "value": "swelled_lymph_nodes"
+    },
+    {
+        "word": "kh\u00f3 ch\u1ecbu, kh\u00f4ng tho\u1ea3i m\u00e1i",
+        "type": "tinh th\u1ea7n",
+        "value": "malaise"
+    },
+    {
+        "word": "t\u1ea7m nh\u00ecn b\u1ecb h\u1ea1n ch\u1ebf, kh\u00f3 nh\u00ecn",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "blurred_and_distorted_vision"
+    },
+    {
+        "word": "\u0111\u1eddm",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "phlegm"
+    },
+    {
+        "word": "vi\u00eam h\u1ecdng",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "throat_irritation"
+    },
+    {
+        "word": "m\u1eaft \u0111\u1ecf",
+        "type": "m\u1eaft",
+        "value": "redness_of_eyes"
+    },
+    {
+        "word": "xoang",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "sinus_pressure"
+    },
+    {
+        "word": "s\u1ed5 m\u0169i",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "runny_nose"
+    },
+    {
+        "word": "ngh\u1eb9t m\u0169i",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "congestion"
+    },
+    {
+        "word": "t\u1ee9c ng\u1ef1c, \u0111au th\u1eaft ng\u1ef1c",
+        "type": "v\u00f9ng ng\u1ef1c",
+        "value": "chest_pain"
+    },
+    {
+        "word": "c\u01a1 \u1edf chi b\u1ecb y\u1ebfu, y\u1ebfu c\u01a1",
+        "type": "c\u01a1",
+        "value": "weakness_in_limbs"
+    },
+    {
+        "word": "tim \u0111\u1eadp nhanh",
+        "type": "tim m\u1ea1ch",
+        "value": "fast_heart_rate"
+    },
+    {
+        "word": "\u0111au khi \u0111i \u0111\u1ea1i ti\u1ec7n",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "pain_during_bowel_movements"
+    },
+    {
+        "word": "\u0111au \u1edf h\u1eadu m\u00f4n",
+        "type": "h\u1eadu m\u00f4n",
+        "value": "pain_in_anal_region"
+    },
+    {
+        "word": "ph\u00e2n c\u00f3 m\u00e1u",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "bloody_stool"
+    },
+    {
+        "word": "ng\u1ee9a \u1edf v\u00f9ng h\u1eadu m\u00f4n, vi\u00eam \u1edf v\u00f9ng h\u1eadu m\u00f4n",
+        "type": "h\u1eadu m\u00f4n",
+        "value": "irritation_in_anus"
+    },
+    {
+        "word": "\u0111au c\u1ed5, m\u1ecfi c\u1ed5",
+        "type": "c\u1ed5 vai g\u00e1y",
+        "value": "neck_pain"
+    },
+    {
+        "word": "ch\u00f3ng m\u1eb7t, cho\u00e1ng v\u00e1ng \u0111\u1ea7u",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "dizziness"
+    },
+    {
+        "word": "chu\u1ed9t r\u00fat, co g\u00e2n",
+        "type": "c\u01a1",
+        "value": "cramps"
+    },
+    {
+        "word": "b\u1ea7m t\u00edm, th\u00e2m t\u00edm",
+        "type": "da",
+        "value": "bruising"
+    },
+    {
+        "word": "b\u00e9o ph\u00ec, m\u1eadp m\u1ea1p",
+        "type": "c\u00e2n n\u1eb7ng",
+        "value": "obesity"
+    },
+    {
+        "word": "s\u01b0ng \u1edf ch\u00e2n, ph\u00f9 n\u1ec1 \u1edf ch\u00e2n",
+        "type": "s\u01b0ng t\u1ea5y",
+        "value": "swollen_legs"
+    },
+    {
+        "word": "s\u01b0ng m\u1ea1ch m\u00e1u",
+        "type": "s\u01b0ng t\u1ea5y",
+        "value": "swollen_blood_vessels"
+    },
+    {
+        "word": "s\u01b0ng \u1edf m\u1eb7t v\u00e0 m\u1eaft, ph\u00f9 n\u1ec1 m\u1eb7t v\u00e0 m\u1eaft",
+        "type": "s\u01b0ng t\u1ea5y",
+        "value": "puffy_face_and_eyes"
+    },
+    {
+        "word": "b\u01b0\u1edbu c\u1ed5, ph\u00ecnh to tuy\u1ebfn gi\u00e1p",
+        "type": "c\u1ed5 vai g\u00e1y",
+        "value": "enlarged_thyroid"
+    },
+    {
+        "word": "m\u00f3n tay d\u1ec5 g\u00e3y",
+        "type": "tay",
+        "value": "brittle_nails"
+    },
+    {
+        "word": "s\u01b0ng t\u1ee9 chi, ph\u00f9 n\u1ec1 t\u1ee9 chi",
+        "type": "s\u01b0ng t\u1ea5y",
+        "value": "swollen_extremeties"
+    },
+    {
+        "word": "\u0111\u00f3i kh\u00e1t, ",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "excessive_hunger"
+    },
+    {
+        "word": "quan h\u1ec7 ngo\u00e0i h\u00f4n nh\u00e2n ",
+        "type": "d\u1ecbch t\u1ec5 (\u0111\u00e3 t\u1eebng l\u00e0m g\u00ec)",
+        "value": "extra_marital_contacts"
+    },
+    {
+        "word": "n\u1ee9t n\u1ebb m\u00f4i, vi\u00eam m\u00f4i, ng\u1ee9a m\u00f4i",
+        "type": "m\u00f4i",
+        "value": "drying_and_tingling_lips"
+    },
+    {
+        "word": "n\u00f3i l\u1eafp b\u1eafp",
+        "type": "kh\u00e1c",
+        "value": "slurred_speech"
+    },
+    {
+        "word": "\u0111au nh\u1ee9c \u0111\u1ea7u g\u1ed1i",
+        "type": "ch\u00e2n tay",
+        "value": "knee_pain"
+    },
+    {
+        "word": "\u0111au kh\u1edbp h\u00f4ng",
+        "type": "kh\u1edbp",
+        "value": "hip_joint_pain"
+    },
+    {
+        "word": "\u0111au c\u01a1, t\u00ea m\u1ecfi c\u01a1",
+        "type": "c\u01a1",
+        "value": "muscle_weakness"
+    },
+    {
+        "word": "c\u1ee9ng c\u1ed5, \u0111au t\u00ea c\u1ed5",
+        "type": "kh\u00e1c",
+        "value": "stiff_neck"
+    },
+    {
+        "word": "s\u01b0ng kh\u1edbp",
+        "type": "kh\u1edbp",
+        "value": "swelling_joints"
+    },
+    {
+        "word": "c\u1ee9ng c\u01a1, c\u0103ng c\u01a1",
+        "type": "c\u01a1",
+        "value": "movement_stiffness"
+    },
+    {
+        "word": "cho\u00e1ng v\u00e1ng",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "spinning_movements"
+    },
+    {
+        "word": "m\u1ea5t c\u00e2n b\u1eb1ng",
+        "type": "kh\u00e1c",
+        "value": "loss_of_balance"
+    },
+    {
+        "word": "m\u1ea5t th\u0103ng b\u1eb1ng, \u0111\u1ee9ng kh\u00f4ng v\u1eefng",
+        "type": "kh\u00e1c",
+        "value": "unsteadiness"
+    },
+    {
+        "word": "suy nh\u01b0\u1ee3c c\u01a1 th\u1ec3, c\u01a1 th\u1ec3 y\u1ebfu \u1edbt",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "weakness_of_one_body_side"
+    },
+    {
+        "word": "m\u1ea5t kh\u1ee9u gi\u00e1c, kh\u00f4ng ng\u1eedi \u0111\u01b0\u1ee3c m\u00f9i",
+        "type": "m\u0169i",
+        "value": "loss_of_smell"
+    },
+    {
+        "word": "vi\u00eam b\u00e0ng quang",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "bladder_discomfort"
+    },
+    {
+        "word": "n\u01b0\u1edbc ti\u1ec3u c\u00f3 m\u00f9i l\u1ea1",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "foul_smell_of urine"
+    },
+    {
+        "word": "ti\u1ec3u d\u1eaft, ti\u1ec3u li\u00ean t\u1ee5c",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "continuous_feel_of_urine"
+    },
+    {
+        "word": "b\u1ee5ng ph\u00ecnh to",
+        "type": "b\u1ee5ng",
+        "value": "passage_of_gases"
+    },
+    {
+        "word": "ng\u1ee9a trong da, vi\u00eam da",
+        "type": "da",
+        "value": "internal_itching"
+    },
+    {
+        "word": "th\u01b0\u01a1ng h\u00e0n",
+        "type": "kh\u00e1c",
+        "value": "toxic_look_(typhos)"
+    },
+    {
+        "word": "tr\u1ea7m c\u1ea3m",
+        "type": "t\u00e2m l\u00fd",
+        "value": "depression"
+    },
+    {
+        "word": "d\u1ec5 c\u00e1u g\u1eaft, d\u1ec5 n\u1ed5i n\u00f3ng, d\u1ec5 n\u1ed5i gi\u1eadn",
+        "type": "t\u00e2m l\u00fd",
+        "value": "irritability"
+    },
+    {
+        "word": "\u0111au c\u01a1, nh\u1ee9c c\u01a1",
+        "type": "c\u01a1",
+        "value": "muscle_pain"
+    },
+    {
+        "word": "r\u1ed1i lo\u1ea1n c\u1ea3m gi\u00e1c",
+        "type": "t\u00ecnh tr\u1ea1ng c\u01a1 th\u1ec3",
+        "value": "altered_sensorium"
+    },
+    {
+        "word": "\u0111\u1ed1m \u0111\u1ecf tr\u00ean da, n\u1ed5i m\u1ea9n \u0111\u1ecf",
+        "type": "da",
+        "value": "red_spots_over_body"
+    },
+    {
+        "word": "\u0111au b\u1ee5ng",
+        "type": "b\u1ee5ng",
+        "value": "belly_pain"
+    },
+    {
+        "word": "kinh nguy\u1ec7t b\u1ea5t th\u01b0\u1eddng",
+        "type": "kinh nguy\u1ec7t",
+        "value": "abnormal_menstruation"
+    },
+    {
+        "word": "m\u1ea3ng da \u0111\u1ed5i m\u00e0u, r\u1ed1i lo\u1ea1n s\u1eafc t\u1ed1 da",
+        "type": "da",
+        "value": "dischromic _patches"
+    },
+    {
+        "word": "ch\u1ea3y n\u01b0\u1edbc m\u1eaft",
+        "type": "m\u1eaft",
+        "value": "watering_from_eyes"
+    },
+    {
+        "word": "th\u00e8m \u0103n",
+        "type": "c\u1ea3m gi\u00e1c",
+        "value": "increased_appetite"
+    },
+    {
+        "word": "ti\u1ec3u nhi\u1ec1u n\u01b0\u1edbc",
+        "type": "b\u00e0i ti\u1ebft",
+        "value": "polyuria"
+    },
+    {
+        "word": "di truy\u1ec1n",
+        "type": "kh\u00e1c",
+        "value": "family_history"
+    },
+    {
+        "word": "ho c\u00f3 \u0111\u1eddm",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "mucoid_sputum"
+    },
+    {
+        "word": "\u0111\u1eddm m\u00e0u n\u00e2u, \u0111\u1eddm n\u00e2u, \u0111\u1eddm \u0111en",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "rusty_sputum"
+    },
+    {
+        "word": "thi\u1ebfu t\u1eadp trung, l\u01a1 \u0111\u00e3ng sao nh\u00e3ng",
+        "type": "tinh th\u1ea7n",
+        "value": "lack_of_concentration"
+    },
+    {
+        "word": "r\u1ed1i lo\u1ea1n th\u1ecb gi\u00e1c, m\u1edd m\u1eaft",
+        "type": "m\u1eaft",
+        "value": "visual_disturbances"
+    },
+    {
+        "word": "truy\u1ec1n m\u00e1u",
+        "type": "m\u00e1u",
+        "value": "receiving_blood_transfusion"
+    },
+    {
+        "word": "nhi\u1ec5m tr\u00f9ng, l\u00e2y nhi\u1ec5m b\u1ec7nh",
+        "type": "h\u1ec7 mi\u1ec5n d\u1ecbch",
+        "value": "receiving_unsterile_injections"
+    },
+    {
+        "word": "h\u00f4n m\u00ea",
+        "type": "kh\u00e1c",
+        "value": "coma"
+    },
+    {
+        "word": "xu\u1ea5t huy\u1ebft d\u1ea1 d\u00e0y",
+        "type": "h\u1ec7 ti\u00eau h\u00f3a",
+        "value": "stomach_bleeding"
+    },
+    {
+        "word": "tr\u01b0\u1edbng b\u1ee5ng, \u0111\u1ea7y h\u01a1i",
+        "type": "b\u1ee5ng",
+        "value": "distention_of_abdomen"
+    },
+    {
+        "word": "u\u1ed1ng nhi\u1ec1u r\u01b0\u1ee3u",
+        "type": "d\u1ecbch t\u1ec5 (\u0111\u00e3 t\u1eebng l\u00e0m g\u00ec)",
+        "value": "history_of_alcohol_consumption"
+    },
+    {
+        "word": "t\u00edch t\u1ee5 d\u1ecbch",
+        "type": "ch\u1ea5t d\u1ecbch",
+        "value": "fluid_overload.1"
+    },
+    {
+        "word": "ho ra m\u00e1u",
+        "type": "tai m\u0169i h\u1ecdng",
+        "value": "blood_in_sputum"
+    },
+    {
+        "word": "gi\u00e3n t\u0129nh m\u1ea1ch",
+        "type": "tim m\u1ea1ch",
+        "value": "prominent_veins_on_calf"
+    },
+    {
+        "word": "h\u1ed3i h\u1ed9p",
+        "type": "t\u00e2m l\u00fd",
+        "value": "palpitations"
+    },
+    {
+        "word": "\u0111au khi \u0111i b\u1ed9",
+        "type": "kh\u00e1c",
+        "value": "painful_walking"
+    },
+    {
+        "word": "m\u1ee5n m\u1ee7",
+        "type": "da",
+        "value": "pus_filled_pimples"
+    },
+    {
+        "word": "m\u1ee5n \u0111\u1ea7u \u0111en",
+        "type": "da",
+        "value": "blackheads"
+    },
+    {
+        "word": "s\u1eb9o",
+        "type": "da",
+        "value": "scurring"
+    },
+    {
+        "word": "da bong tr\u00f3c",
+        "type": "da",
+        "value": "skin_peeling"
+    },
+    {
+        "word": "s\u1ea1m da do b\u1ea1c",
+        "type": "da",
+        "value": "silver_like_dusting"
+    },
+    {
+        "word": "l\u00f5m nh\u1ecf tr\u00ean m\u00f3ng tay",
+        "type": "ch\u00e2n tay",
+        "value": "small_dents_in_nails"
+    },
+    {
+        "word": "vi\u00eam m\u00f3ng",
+        "type": "ch\u00e2n tay",
+        "value": "inflammatory_nails"
+    },
+    {
+        "word": "m\u1ee5n n\u01b0\u1edbc",
+        "type": "da",
+        "value": "blister"
+    },
+    {
+        "word": "lo\u00e9t \u0111\u1ecf quanh m\u0169i",
+        "type": "da",
+        "value": "red_sore_around_nose"
+    },
+    {
+        "word": "ch\u1ea3y d\u1ecbch v\u00e0ng",
+        "type": "ch\u1ea5t d\u1ecbch",
+        "value": "yellow_crust_ooze"
+    }
+]

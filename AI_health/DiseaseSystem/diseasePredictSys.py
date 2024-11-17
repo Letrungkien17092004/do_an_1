@@ -56,8 +56,8 @@ class DiseasePredictSys:
             return "COUNT"
         prediction = self.predict(binary_inp)
         engDiseaseName = self.getDiseaseNameFromPrediction(prediction)
-        viDiseaseName = self.getViName(engDiseaseName[0])
-        return viDiseaseName
+        # viDiseaseName = self.getViName(engDiseaseName[0])
+        return engDiseaseName[0]
 
     # hàm này sẽ chuyển đổi dữ liệu đầu ra của hàm chuẩn đoán thành tên bệnh
     # vì khi chuẩn đoán tên bệnh sẽ là số vì vậy ta cần chuyển nó về chữ

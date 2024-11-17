@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}HUMG chuẩn đoán bệnh{% endblock %}</title>
 
-    <link rel="shortcut icon" href="{% static 'imgs/logo_humg.jpg' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'app/imgs/logo_humg.jpg' %}" type="image/x-icon">
 
     {% block importCSS %}
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
     {% endblock %}
 </head>
 
@@ -58,7 +58,7 @@
     {% endblock %}
 
     {% block importJS %}
-    <script type="module" src="{% static 'js/home.js' %}"></script>
+    <script type="module" src="{% static 'app/js/home.js' %}"></script>
     {% endblock %}
 
 </body>
