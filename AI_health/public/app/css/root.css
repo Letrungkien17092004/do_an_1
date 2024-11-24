@@ -95,7 +95,7 @@ html {
     height: inherit;
 }
 
-/* Margin - Pading */
+/* margin - padding */
 /* top */
 .margin-t-6 {
     margin-top: 6px;
@@ -296,6 +296,11 @@ html {
 
 .header.header-h-50 {
     height: 50px;
+}
+
+.header.left-center {
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* Filter */
