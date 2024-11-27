@@ -8,7 +8,7 @@ class Post(models.Model):
     userId = models.ForeignKey(User, on_delete=models.CASCADE)
     content = RichTextField()  # Trường rich text
     created_at = models.DateTimeField(auto_now_add=True)
-    thumbnail = models.ImageField(upload_to='home/static/imgs/post', null=True, blank=True)
+    thumbnail = models.ImageField(upload_to='static/images/posts', null=True, blank=True)
     def __str__(self):
         return self.title
 

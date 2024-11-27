@@ -10,6 +10,7 @@
 
     {% block importCSS %}
     <link rel="stylesheet" href="{% static 'app/css/select_page.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/grid.css' %}">
     {% endblock %}
 </head>
 
@@ -43,7 +44,7 @@
         </div>
     </div>
     <!-- Predict result -->
-    <div id="predict-result-container" class="flex flex-dir-column center-hoz">
+    <div id="predict-result-container" class="flex flex-dir-column center-hoz hiden">
         <div class="header margin-t-12">
             <div class="text fz-26 text w-600 text-black">Kết quả chuẩn đoán</div>
         </div>
@@ -55,7 +56,7 @@
                 <div class="text fz-20 w-600 text-black">Tên bệnh</div>
             </div>
             <div id="predict-result-name" class="text fz-18 text-black margin-t-6">
-                Bệnh đái tháo đường
+                <!-- Bệnh đái tháo đường -->
             </div>
         </div>
         <div class="dash-line das-color-theme"></div>
@@ -65,6 +66,18 @@
                 <div class="text fz-20 w-600 text-black">Mô tả</div>
             </div>
             <div id="predict-result-discription" class="text fz-18 text-black margin-t-6">
+                <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eum vitae unde voluptatum id? Quas
+                dicta quisquam animi dolor. Totam quisquam qui architecto commodi reiciendis consectetur nihil amet
+                tempore adipisci! -->
+            </div>
+        </div>
+        <div class="dash-line das-color-theme"></div>
+        <!-- Food -->
+        <div class="predict-result-components">
+            <div class="header left-center margin-t-12">
+                <div class="text fz-20 w-600 text-black">Các loại thực phẩm phù hợp</div>
+            </div>
+            <div id="predict-result-food" class="text fz-18 text-black margin-t-6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eum vitae unde voluptatum id? Quas
                 dicta quisquam animi dolor. Totam quisquam qui architecto commodi reiciendis consectetur nihil amet
                 tempore adipisci!
@@ -76,10 +89,21 @@
             <div class="header left-center margin-t-12">
                 <div class="text fz-20 w-600 text-black">Các loại thuốc tham khảo</div>
             </div>
-            <div id="predict-result-discription" class="text fz-18 text-black margin-t-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eum vitae unde voluptatum id? Quas
-                dicta quisquam animi dolor. Totam quisquam qui architecto commodi reiciendis consectetur nihil amet
-                tempore adipisci!
+            <div class="text fz-18 text-black margin-t-6">
+                <div class="grid">
+                    <div id="predict-result-medicines" class="row">
+                        <!-- <div class="col l-3">
+                            <div class="medicine-cards">
+                                <div class="medicine-cards-image">
+                                     <img src="\static\images\medicines\0_Ribavirin.webp" alt="">
+                                </div>
+                                <div class="medicine-cards-name">
+                                     thuốc aonsjcậocnancn
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>

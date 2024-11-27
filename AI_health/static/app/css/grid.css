@@ -1,5 +1,4 @@
 
-
 .grid {
     display: block;
     width: 100%;
@@ -8,41 +7,41 @@
 
 .row {
     display: flex;
-}
-
-.row.dir-row {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
 }
 
-.row.row.dir-col {
-    flex-direction: column
-}
-
-.row.row-g-4 {
-    padding-left: -4px;
-    padding-right: -4px;
+.row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .col {
-    width: fit-content;
-}
-
-.row.row-g-4 .col {
     padding-left: 4px;
     padding-right: 4px;
 }
 
-.col.col-center {
-    margin-left: auto;
-    margin-right: auto;
+.row.no-gutters .col {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.col.col-left {
-    margin-right: auto;
+.l-0 {
+    display: none;
 }
 
-.col.col-right {
-    margin-left: auto;
+.l-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
 }
 
+.l-6 {
+    flex: 0 0 50%;
+}
+
+.l-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
