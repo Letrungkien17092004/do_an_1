@@ -56,6 +56,7 @@ export class PredictTypeSelect extends PredictionDiseaseSystem {
     }
 
     renderMedicines(medicines) {
+        this.resultMedicines.innerHTML = ''
         medicines.forEach(medicine => {
             let newCol = document.createElement("div")
             let newMedicineCard = document.createElement("div")

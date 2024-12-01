@@ -1,4 +1,7 @@
 
+:root {
+    --base-col: 8.3333%;
+}
 .grid {
     display: block;
     width: 100%;
@@ -32,9 +35,24 @@
     display: none;
 }
 
+.l-1 {
+    flex: 0 0 calc(var(--base-col) * 1);
+    max-width: calc(var(--base-col) * 1);
+}
+
+.l-2 {
+    flex: 0 0 calc(var(--base-col) * 2);
+    max-width: calc(var(--base-col) * 2);
+}
+
 .l-3 {
     flex: 0 0 25%;
     max-width: 25%;
+}
+
+.l-4 {
+    flex: 0 0 calc(var(--base-col) * 4);
+    max-width: calc(var(--base-col) * 4);
 }
 
 .l-6 {

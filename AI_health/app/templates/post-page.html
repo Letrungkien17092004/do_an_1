@@ -1,0 +1,160 @@
+{% extends 'base_ui.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Trung tâm tài liệu{% endblock %}</title>
+    {% block importCSS %}
+    <link rel="stylesheet" href="{% static 'app/css/post_page.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/grid.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="post-page-container">
+        <div class="filter">
+            <div class="grid">
+                <div class="row">
+                    <div class="col l-4">
+                        <div class="filter-options">
+                            <div class="filter-label">
+                                Lọc theo loại bệnh:
+                            </div>
+                            <select class="selection" id="filter-category">
+                                <option value="all">Tất cả</option>
+                                <option value="Bệnh ung thư">Bệnh ung thư</option>
+                                <option value="Bệnh ngoài da">Bệnh ngoài da</option>
+                                <option value="Bệnh xương khớp">Bệnh xương khớp</option>
+                                <option value="Bệnh dị ứng">Bệnh dị ứng</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col l-4">
+                        <div class="filter-options">
+                            <div class="search-box">
+                                <div class="filter-label">Tìm kiếm</div>
+                                <input class="input-search" type="text" id="filter-search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4">
+                        <div class="filter-options">
+                            <div class="filter-label">
+                                Sắp xếp theo:
+                            </div>
+                            <select class="selection" id="filter-sort">
+                                <option value="newest">Mới nhất</option>
+                                <option value="oldest">Muộn nhất</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dash-line das-color-theme"></div>
+        <div class="post-container">
+            <div class="grid">
+                <div class="row">
+                    <div class="col l-12">
+                        <a href="/post/view/" class="post-cards">
+                            <div class="post-thumbnail"></div>
+                            <div class="post-info">
+                                <div class="post-info-title text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
+                                </div>
+                                <div class="post-info-discription text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col l-12">
+                        <a href="#" class="post-cards">
+                            <div class="post-thumbnail"></div>
+                            <div class="post-info">
+                                <div class="post-info-title text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
+                                </div>
+                                <div class="post-info-discription text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col l-12">
+                        <a href="#" class="post-cards">
+                            <div class="post-thumbnail"></div>
+                            <div class="post-info">
+                                <div class="post-info-title text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
+                                </div>
+                                <div class="post-info-discription text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col l-12">
+                        <a href="#" class="post-cards">
+                            <div class="post-thumbnail"></div>
+                            <div class="post-info">
+                                <div class="post-info-title text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
+                                </div>
+                                <div class="post-info-discription text text-black">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
+                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
+                                    quos earum natus! Minus, dignissimos consequatur?
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block importJS %}
+    {% endblock %}
+</body>
+
+</html>

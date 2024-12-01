@@ -1,0 +1,76 @@
+:root {
+    --filter-h: 40px;
+}
+.post-page-container {
+    margin: 0 auto;
+    display: block;
+    width: 80vw;
+    height: 100vh;
+}
+
+.filter {
+    height: var(--filter-h);
+}
+
+.filter-options {
+    height: var(--filter-h);
+}
+
+.filter-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.search-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-search {
+    outline: none;
+    padding: 4px;
+    border-radius: 6px;
+    height: 26px;
+    border: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+
+/* Post card */
+
+.post-cards {
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+.post-thumbnail {
+    width: 20%;
+    height: 100px;
+    background-image: url("/static/app/imgs/logo_humg.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.post-info {
+    width: 80%;
+    height: 100px;
+    align-self: flex-start;
+}
+
+.post-info-title {
+    max-height: 20%;
+    font-size: 2rem;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.post-info-discription {
+    max-height: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
