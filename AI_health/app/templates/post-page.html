@@ -59,13 +59,13 @@
         <div class="post-container">
             <div class="grid">
                 <div class="row">
+                    {% for post in posts %}
                     <div class="col l-12">
-                        <a href="/post/view/" class="post-cards">
-                            <div class="post-thumbnail"></div>
+                        <a href="/post/view/{{ post.id }}" class="post-cards">
+                            <div style="background-image: url('/{{post.thumbnail}}')" class="post-thumbnail"></div>
                             <div class="post-info">
                                 <div class="post-info-title text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
+                                    {{ post.title }}
                                 </div>
                                 <div class="post-info-discription text text-black">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
@@ -81,71 +81,34 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col l-12">
-                        <a href="#" class="post-cards">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-info">
-                                <div class="post-info-title text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
-                                </div>
-                                <div class="post-info-discription text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="paginator-container">
+            <div class="paginator-list">
+                <div class="grid">
+                    <div class="row straight-center">
+                        {% for pageNum in rangePage %}
+
+                        {% if pageNum == currentPage %}
+                            <div class="col l-2">
+                                <a href="/post/page/{{pageNum}}" class="paginator-items isCurrent">
+                                    <span>
+                                        {{pageNum}}
+                                    </span>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col l-12">
-                        <a href="#" class="post-cards">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-info">
-                                <div class="post-info-title text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
-                                </div>
-                                <div class="post-info-discription text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                </div>
+                        {% else %}
+                            <div class="col l-2">
+                                <a href="/post/page/{{pageNum}}" class="paginator-items">
+                                    <span>
+                                        {{pageNum}}
+                                    </span>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col l-12">
-                        <a href="#" class="post-cards">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-info">
-                                <div class="post-info-title text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sapiente odio corrupti consequatur ad. Minus id quos recusandae.
-                                </div>
-                                <div class="post-info-discription text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                </div>
-                            </div>
-                        </a>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>

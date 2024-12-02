@@ -16,6 +16,11 @@
     margin-right: -4px;
 }
 
+.row.straight-center {
+    align-items: center;
+    justify-content: center;
+}
+
 .row.no-gutters {
     margin-left: 0;
     margin-right: 0;

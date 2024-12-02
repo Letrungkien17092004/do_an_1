@@ -5,7 +5,7 @@
     margin: 0 auto;
     display: block;
     width: 80vw;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .filter {
@@ -37,7 +37,9 @@
 
 
 /* Post card */
-
+.post-container {
+    min-height: 450px;
+}
 .post-cards {
     margin-top: 12px;
     text-decoration: none;
@@ -73,4 +75,36 @@
     max-height: 80%;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+
+.paginator-container {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.paginator-list {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.paginator-items {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: var(--theme-green-3);
+    text-decoration: none;
+    padding: 6px;
+    color: #fff;
+
+}
+
+.paginator-items:hover {
+    background-color: var(--theme-green-2);
+}
+
+.paginator-items.isCurrent {
+    background-color: var(--theme-green-2);
 }
