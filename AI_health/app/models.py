@@ -7,6 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     userId = models.ForeignKey(User, on_delete=models.CASCADE)
     content = RichTextField()  # Trường rich text
+    discription = models.TextField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     thumbnail = models.ImageField(upload_to='static/images/posts', null=True, blank=True)
     def __str__(self):

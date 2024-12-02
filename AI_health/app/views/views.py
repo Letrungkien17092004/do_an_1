@@ -15,7 +15,7 @@ def chat_page(request):
 def select_page(request):
     return render(request, "select-page.html", {})
 
-pageSize = 4
+pageSize = 3
 @require_GET
 def post_page(request, pageNumber = 1, category = 'all', sortBy = 'newest'):
     allPost = Post.objects.all()

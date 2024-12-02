@@ -39,3 +39,12 @@
 #img-logo {
     width: 30px;
 }
+
+
+#previous-page {
+    cursor: pointer;
+}
+
+#previous-page:hover {
+    filter: brightness(80%);
+}

@@ -13,7 +13,26 @@
 <body>
     {% block content %}
     <div class="post-container">
-        {{post.content | safe}}
+        <div class="post-category-path">
+            <a href="/" class="post-path-components">
+                Trang chủ >
+            </a>
+            <a href="/post/page" class="post-path-components">
+                Trung tâm tài liệu >
+            </a>
+            <a href="#" class="post-path-components">
+                Phân loại
+            </a>
+        </div>
+        <div class="dash-line das-color-theme"></div>
+        <div class="post-header">
+            <div class="post-title">
+                <h1>{{post.title}}</h1>
+            </div>
+        </div>
+        <div class="post-content">
+            {{post.content | safe}}
+        </div>
     </div>
     {% endblock %}
 </body>

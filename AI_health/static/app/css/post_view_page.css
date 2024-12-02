@@ -3,3 +3,39 @@
     margin: 0 auto;
     font-size: 1.6rem;
 }
+
+.post-category-path {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.post-path-components {
+    cursor: pointer;
+    text-align: center;
+    padding: 4px 6px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--theme-green-4);
+    text-decoration: none;
+}
+
+.post-path-components:hover {
+    filter: brightness(70%);
+}
+
+/* header */
+.post-header {
+    display: flex;
+    justify-content: center;
+}
+
+.post-title {
+    padding: 6px 12px;
+}
+
+/* content */
+.post-content {
+    padding: 0 10%;
+}

@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Trung tâm tài liệu{% endblock %}</title>
+    <title>{% block title %}Trung tâm tài liệu - trang {{currentPage}}{% endblock %}</title>
     {% block importCSS %}
     <link rel="stylesheet" href="{% static 'app/css/post_page.css' %}">
     <link rel="stylesheet" href="{% static 'app/css/grid.css' %}">
@@ -68,15 +68,7 @@
                                     {{ post.title }}
                                 </div>
                                 <div class="post-info-discription text text-black">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi iste eum nemo
-                                    explicabo qui voluptas est sint, nobis odit deserunt exercitationem itaque mollitia
-                                    quos earum natus! Minus, dignissimos consequatur?
+                                    {{ post.discription }}
                                 </div>
                             </div>
                         </a>
