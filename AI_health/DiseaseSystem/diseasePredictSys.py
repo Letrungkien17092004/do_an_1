@@ -24,6 +24,7 @@ class DiseasePredictSys:
     # hệ thống chuẩn đoán bệnh
     def debug(self):
         print(os.getcwd())
+
     def load(self):
         print("waiting for loading Model, data and more...")
         self.model = joblib.load(self.model_link)
@@ -130,3 +131,5 @@ class DiseasePredictSys:
             if self.engSymptoms[i] in selected_list:
                 binary_arr[i] = 1
         return binary_arr
+    
+

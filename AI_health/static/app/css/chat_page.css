@@ -1,38 +1,91 @@
-#chat {
-    width: 80vw;
+
+
+#chat-container {
+    min-height: 70vh;
+    /* max-height: 80vh; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#message-box {
-    background-color: var(--theme-blue-2);
-    height: inherit;
-    padding: 12px 18px;
-    overflow-y: auto;
+
+
+.chat-message-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    margin-top: 24px;
 }
 
+/* message */
 .message {
-    margin-bottom: 24px;
-    padding: 6px 12px;
-    background-color: var(--theme-blue-4);
+    display: inline-block;
+    max-width: 60%;
     border-radius: 6px;
-}
-
-.message.user {
-    max-width: 400px;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+    word-wrap: break-word; /* Đảm bảo văn bản xuống dòng nếu quá dài */
+    overflow-wrap: break-word;
 }
 
 .message.bot {
-    max-width: 800px;
+    margin: 12px auto 0 0;
 }
 
-#input-container {
-    padding: 12px 16px;
-    border-radius: 6px;
+.message.user {
+    margin: 12px 0 0 auto;
 }
-#input-area {
+
+.message-text {
+    text-align: justify;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 8px 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+.input-field {
+    padding: 4px 6px;
+    flex-grow: 1;
+}
+
+
+/* textarea */
+#chat-input {
+    color: #fff;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 30px;
     resize: none;
     outline: none;
-    font-size: 1.6rem;
-    background-color: transparent;
-    height: 20px;
     border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    overflow: hidden;
 }
+
+.input-action {
+    align-self: flex-end;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 12px;
+    color: #fff;
+    background-color: var(--theme-green-4);
+}
+
+

@@ -18,51 +18,34 @@
     {% block content %}
     <div class="width-80vw center-hoz">
         <div class="container">
-            <!-- chat heading -->
-            <div class="header header-h-30">
-                <div class="text fz-20 text-black">
-                    Hãy mô tả các triệu chứng bạn gặp phải
-                </div>
-            </div>
-            <div class="dash-line das-w-80 das-color-theme center-hoz"></div>
-            <div class="container height-100vh">
-                <div id="message-box" class="height-inherit flex flex-dir-column">
-                    <!-- message -->
-                    <div class="grid flex-grow-1">
-                        <div class="row dir-col">
-                            <!-- user message -->
-                            <div class="col col-right">
-                                <div class="message user">
-                                    <div class="text fz-16 text-white w-600">
-                                        Tôi bị ngứa, và có những nốt mụn nước nhỏ trên da, phát ban da
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col col-left">
-                                <div class="message bot">
-                                    <div class="text fz-16 text-white w-500">
-                                        Từ những dữ liệu bạn cung cấp rất có thể bạn đã tiếp xúc với Nấm và trúng độc
-                                        của nấm. <br>
-                                        Bệnh: Nhiễm trùng nấm <br>
-                                        Nguyên nhân: tiếp xúc với nấm <br>
-                                        chi tiết cách điều trị: <a href="http://">truy cập link sau</a>
-                                    </div>
-                                </div>
-                            </div>
+            <div id="chat-container">
+                <div class="chat-message-container">
+                    <div class="message user">
+                        <div class="message-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error accusantium dolorem numquam
+                            hic ab quasi saepe magnam quia impedit itaque tempore voluptate dignissimos harum culpa
+                            provident, sint unde laborum modi!
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="flex flex-center">
-                            <div id="input-container" class="flex flex-center bg-white-0 width-80">
-                                <textarea class="flex-grow-1" name="input" id="input-area"></textarea>
-                                <div id="input-action">
-                                    <div class="btn bg-green-4 border-radius-6">
-                                        <div class="text fz-16 text-white">Gửi</div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="message bot">
+                        <div class="message-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error accusantium dolorem numquam
+                            hic ab quasi saepe magnam quia impedit itaque tempore voluptate dignissimos harum culpa
+                            provident, sint unde laborum modi!
                         </div>
+                    </div>
+                    <div class="message bot">
+                        <div class="message-text">
+                            Lorem
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <div class="input-field">
+                        <textarea name="chat-input" id="chat-input"></textarea>
+                    </div>
+                    <div class="input-action">
+                        Gửi
                     </div>
                 </div>
             </div>
