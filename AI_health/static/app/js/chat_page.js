@@ -17,19 +17,21 @@ class ChatManager {
         this.activator.addEventListener("click", await this.submitMessageEvent())
         console.log("khởi tạo thành công")
     }
+
     addMessage(messContent, messType) {
-        const newMessage =
-            `
-        <div class="message ${messType}">
-            <div class="message-text">
-                ${messContent}
-            </div>
-        </div>
-        `
+        const newMessage = document.createElement("div")
+        newMessage.className = `message ${messType}`
+
+        const newMessageText = document.createElement("div")
+        newMessageText.className = "message-text"
+        newMessageText.innerHTML = messContent
+
+        newMessage.appendChild(newMessageText)
+        this.messContainer.append(newMessage)
     }
 
     async postMessage(message) {
-        const res = await fetch("/api/predict/message", {
+        const res = await fetch("/api/predict/v1/message", {
             headers: {
                 "Content-Type" : "application/json",
             },
@@ -48,8 +50,17 @@ class ChatManager {
         const thisParrent = this
         return async function (event) {
             event.stopPropagation()
-            console.log(thisParrent.state)
-            console.log(thisParrent.textarea.value)
+            if (thisParrent.state == "pending") {
+                return
+            }
+            thisParrent.state = 'pending'
+            let userMessage = thisParrent.textarea.value
+            // Add user message
+            thisParrent.addMessage(userMessage, "user")
+            let responseJson = await thisParrent.postMessage(userMessage.trim())
+            // Add bot response
+            thisParrent.addMessage(responseJson["message"], 'bot')
+            thisParrent.state = "ready"
         }
     }
 
@@ -72,7 +83,7 @@ window.addEventListener("load", () => {
         areaSetting: {
             heightTrigger: 30
         },
-        messContainer: document.getElementById("chat-container"),
+        messContainer: document.getElementById("message-container"),
         activator: document.getElementById("post-message")
     })
     chatManager.load()

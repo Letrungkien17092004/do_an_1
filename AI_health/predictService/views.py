@@ -15,13 +15,25 @@ diseasePredictSys.load()
 @require_POST
 @csrf_exempt
 def predictMassage(request):
-    message_vi = json.loads(request.body)
-    chatResponse = chat("hi")
-    # result = diseasePredictSys.diseasePredict(message_vi, predType="chat")
-    res = {
-        "message": chatResponse
-    }
-    return JsonResponse(res)
+    try:
+        body = json.loads(request.body)
+        message_vi = body["message"]
+        chatResponse = chat(message_vi)
+        res = {
+            "message" : None,
+            "status" : "OK"
+        }
+        if chatResponse == None:
+            res["message"] = "Xin lỗi bạn tôi không hiểu và không thể thực hiện chức năng này"
+            # result = diseasePredictSys.diseasePredict(message_vi, predType="chat")
+        else:
+            res["message"] = chatResponse
+        return JsonResponse(res)
+    except:
+        res = {
+            "message" : "Server error",
+            'status' : "BAD"
+        }
 
 
 @require_POST
