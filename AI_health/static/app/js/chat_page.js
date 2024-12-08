@@ -60,6 +60,7 @@ class ChatManager {
             let responseJson = await thisParrent.postMessage(userMessage.trim())
             // Add bot response
             thisParrent.addMessage(responseJson["message"], 'bot')
+            thisParrent.textarea.value = ""
             thisParrent.state = "ready"
         }
     }
