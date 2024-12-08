@@ -54,13 +54,20 @@ class DiseasePredictSys:
             binary_inp = self.getBinaryText(raw_inp)
         elif predType == "select":
             binary_inp = self.getBinaryList(raw_inp)
+        if not self.validRawInput(binary_inp):
+            return "ZERO-SYMPTOM"
         countImportant = self.countImportantFeature(binary_inp)
         if countImportant < 1:
-            return "COUNT"
+            return "ZERO-IMPORTANT"
         prediction = self.predict(binary_inp)
         engDiseaseName = self.getDiseaseNameFromPrediction(prediction)
         # viDiseaseName = self.getViName(engDiseaseName[0])
         return engDiseaseName[0]
+    # Kiểm tra input đầu vào có ít nhất một triệu chứng được tìm thấy
+    def validRawInput(self, raw_inp):
+        if 1 in raw_inp:
+            return True
+        return False
 
     # hàm này sẽ chuyển đổi dữ liệu đầu ra của hàm chuẩn đoán thành tên bệnh
     # vì khi chuẩn đoán tên bệnh sẽ là số vì vậy ta cần chuyển nó về chữ

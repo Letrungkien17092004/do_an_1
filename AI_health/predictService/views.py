@@ -24,16 +24,26 @@ def predictMassage(request):
             "status" : "OK"
         }
         if chatResponse == None:
-            res["message"] = "Xin lỗi bạn tôi không hiểu và không thể thực hiện chức năng này"
-            # result = diseasePredictSys.diseasePredict(message_vi, predType="chat")
+            result = diseasePredictSys.diseasePredict(message_vi, predType="chat")
+            print("work in None 2")
+            if result == "ZERO-SYMPTOM":
+                res["message"] = "Xin lỗi tôi không hiểu yêu cầu này của bạn"
+            elif result == "ZERO-IMPORTANT":
+                res["message"] = \
+                "tôi không thể chuẩn đoán bệnh của bạn bởi vì những triệu chứng mà bạn cung cấp thật sự \
+                không quan trọng. Nó xuất hiện ở rất nhiều căn bệnh. Tôi rất xin lỗi vì sự bất tiện này"
+            else:
+                res["message"] = result
         else:
             res["message"] = chatResponse
+        print("work here", res)
         return JsonResponse(res)
-    except:
+    except Exception as e:
         res = {
             "message" : "Server error",
             'status' : "BAD"
         }
+        return JsonResponse(res)
 
 
 @require_POST

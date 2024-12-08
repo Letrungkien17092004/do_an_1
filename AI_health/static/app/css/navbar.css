@@ -7,6 +7,12 @@
     background-color: var(--theme-green-2);
 }
 
+.navbar.fixed {
+    position: fixed;
+    left: 50%; /* Đưa phần tử vào giữa màn hình */
+    transform: translateX(-50%); /* Dịch chuyển về chính giữa */
+}
+
 .navbar_container {
     width: inherit;
     height: inherit;
