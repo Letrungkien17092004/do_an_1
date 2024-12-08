@@ -1,0 +1,48 @@
+{% extends 'base_ui.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Chuẩn đoán bệnh - chat{% endblock %}</title>
+
+    {% block importCSS %}
+    <link rel="stylesheet" href="{% static 'app/css/chat_page.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/grid.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="width-80vw center-hoz">
+        <div class="container">
+            <div id="chat-container">
+                <div class="chat-message-container">
+                    <!-- <div class="message user | bot">
+                        <div class="message-text">
+                            text here
+                        </div>
+                    </div> -->
+                </div>
+                <div class="chat-input-container">
+                    <div class="input-field">
+                        <textarea name="chat-input" id="chat-input"></textarea>
+                    </div>
+                    <div id="post-message" class="input-action">
+                        Gửi
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block importJS %}
+    <script src="{% static 'app/js/chat_page.js' %}" type="module"></script>
+    {% endblock %}
+
+</body>
+
+</html>

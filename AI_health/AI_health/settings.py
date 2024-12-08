@@ -32,7 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'ckeditor',
-    'app.apps.AppConfig',
+    'appService.apps.AppConfig', # appService (font-end, post-Service, Disease-model)
+    'chatBotService.apps.ChatbotserviceConfig', # chatBotService
+    'predictService.apps.PredictserviceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

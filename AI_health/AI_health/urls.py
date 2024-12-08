@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path("", include("app.urls")),
+    path("", include("appService.urls")),
+    path("api/predict/v1/", include("predictService.urls")),
     path('admin/', admin.site.urls),
 ]  + static("static/", document_root = "static")
