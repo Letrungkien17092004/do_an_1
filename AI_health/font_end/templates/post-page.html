@@ -26,10 +26,9 @@
                             </div>
                             <select class="selection" id="filter-category">
                                 <option value="all">Tất cả</option>
-                                <option value="Bệnh ung thư">Bệnh ung thư</option>
-                                <option value="Bệnh ngoài da">Bệnh ngoài da</option>
-                                <option value="Bệnh xương khớp">Bệnh xương khớp</option>
-                                <option value="Bệnh dị ứng">Bệnh dị ứng</option>
+                                {% for category in categories %}
+                                <option value="{{category.categoryName}}">{{category.categoryName}}</option>
+                                {% endfor %}
                             </select>
                         </div>
                     </div>
@@ -85,7 +84,7 @@
 
                         {% if pageNum == currentPage %}
                             <div class="col l-2">
-                                <a href="/post/page/{{pageNum}}" class="paginator-items isCurrent">
+                                <a href="/post/page/{{pageNum}}/{{currentCategory}}/{{currentSortBy}}" class="paginator-items isCurrent">
                                     <span>
                                         {{pageNum}}
                                     </span>
@@ -93,7 +92,7 @@
                             </div>
                         {% else %}
                             <div class="col l-2">
-                                <a href="/post/page/{{pageNum}}" class="paginator-items">
+                                <a href="/post/page/{{pageNum}}/{{currentCategory}}/{{currentSortBy}}" class="paginator-items">
                                     <span>
                                         {{pageNum}}
                                     </span>

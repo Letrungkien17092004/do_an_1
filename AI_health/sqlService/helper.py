@@ -1,6 +1,6 @@
 # Create your helper here
-from .models import Diseases, Post
-from django.core.paginator import Paginator
+from .models import Diseases, Post, Categories
+
 class DiseaseHelper:
     def getDiseaseInfo(diseaseName):
         medicine = Diseases.objects.get(searchName = diseaseName)
@@ -19,4 +19,9 @@ class PostHelper:
     def getById(postId):
         post = Post.objects.get(id = postId)
         return post
+
+class CategoriesHelper:
+    def getAll():
+        categories = Categories.objects.all()
+        return categories
 

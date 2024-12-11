@@ -60,17 +60,25 @@ class Medicines(models.Model):
     name = models.CharField(max_length=100)
     info = models.TextField(null=True, blank=True)
     price = models.IntegerField(null=True, blank=True)
-    prescription = models.ForeignKey(Prescriptions, on_delete=models.CASCADE, related_name = "medicines")
     image_theme = models.ImageField(upload_to="static/images/medicines/", null=True, blank=True)
-    hasTrained = models.BooleanField(default=False)
-
+    links = models.JSONField(null=True, blank=True)
     def __str__(self):
         return self.name
+    
+class Prescription_medicines(models.Model):
+    prescriptionId = models.ForeignKey(Prescriptions, on_delete=models.CASCADE, related_name="prescription")
+    medicineId = models.ForeignKey(Medicines, on_delete=models.CASCADE, related_name="medicine")
+    class Meta:
+            unique_together = ('prescriptionId', 'medicineId')
+    def __str__(self):
+        return f"Prescription: {self.prescriptionId} <-> Medicine: {self.medicineId}"
+    
 class MedicineImages(models.Model):
     id = models.AutoField(primary_key=True)
     medicine = models.ForeignKey(Medicines, on_delete=models.CASCADE, related_name="images")
     image = models.ImageField(upload_to="static/images/medicines_train/", null=False, blank=False)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+    hasTrained = models.BooleanField(default=False)
 
     def __str__(self):
         return f"ảnh của {self.medicine.name}"

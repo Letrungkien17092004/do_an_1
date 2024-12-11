@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.http import require_GET
-from sqlService.helper import PostHelper
+from sqlService.helper import PostHelper, CategoriesHelper
 from django.core.paginator import Paginator
 
 @require_GET
@@ -25,10 +25,15 @@ def post_page(request, pageNumber = 1, category = 'all', sortBy = 'newest'):
     maxPage = min(pageNumber + 2, totalPage)
     rangePage = range(minPage, maxPage+1)
     postInPage = paginator.get_page(pageNumber)
+    categories = CategoriesHelper.getAll()
+    
     return render(request, 'post-page.html', {
         "posts" : postInPage,
         "rangePage": rangePage,
-        'currentPage': pageNumber
+        'currentPage': pageNumber,
+        "categories": categories,
+        "currentCategory": category,
+        "currentSortBy": sortBy
     })
 
 @require_GET
