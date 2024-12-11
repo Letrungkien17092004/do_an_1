@@ -11,6 +11,7 @@
     position: fixed;
     left: 50%; /* Đưa phần tử vào giữa màn hình */
     transform: translateX(-50%); /* Dịch chuyển về chính giữa */
+    z-index: 1000;
 }
 
 .navbar_container {

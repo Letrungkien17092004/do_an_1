@@ -39,7 +39,7 @@ const filter = new Filter({
 })
 
 const predictSystem = new PredictTypeSelect({
-    url: '/api/predict/select',
+    url: '/api/predict/v1/select',
     selectedList: selectedList,
     submitBtn: document.getElementById("selected-btn"),
     resultContainer: document.getElementById("predict-result-container"),

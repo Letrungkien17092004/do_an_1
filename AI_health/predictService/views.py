@@ -2,7 +2,7 @@ from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 import json
-from appService.models import Diseases, Prescriptions, Medicines
+from sqlService.models import Diseases, Prescriptions, Medicines
 from .DiseaseSystem.diseasePredictSys import DiseasePredictSys
 from chatBotService.views import chat
 

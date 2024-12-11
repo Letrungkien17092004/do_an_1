@@ -40,9 +40,9 @@ export class PredictTypeSelect extends PredictionDiseaseSystem {
     }
     showContainer() {
         this.resultContainer.classList.remove("hiden")
-        this.resultContainer.scrollIntoView({
+        this.submitBtn.scrollIntoView({
             behavior: 'smooth',
-            block: 'start',    
+            block: 'start',
           });
     }
     renderResult(data) {

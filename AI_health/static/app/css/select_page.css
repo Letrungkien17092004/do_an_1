@@ -3,7 +3,7 @@
 .selected-container {
     margin: 0 auto;
     width: 80vw;
-    margin-top: 24px;
+    padding-top: 12vh;
 }
 
 .selected_header {
