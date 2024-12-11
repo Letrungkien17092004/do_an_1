@@ -26,8 +26,8 @@ class Categories(models.Model):
         return self.categoryName
 
 class Post_Categories(models.Model):
-    postId = models.ForeignKey(Post, on_delete=models.CASCADE)
-    categoryId = models.ForeignKey(Categories, on_delete=models.CASCADE)
+    postId = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="post_categories")
+    categoryId = models.ForeignKey(Categories, on_delete=models.CASCADE, related_name="post_categories")
 
     class Meta:
         unique_together = ('postId', 'categoryId')

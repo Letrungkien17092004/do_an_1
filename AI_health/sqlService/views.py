@@ -10,3 +10,5 @@ def GetDiseaseInfo(request, diseaseName):
         "status": "OK"
     })
 
+def getAllPost(request, pageNumber = 1, category = 'all', sortBy = 'newest'):
+    pass

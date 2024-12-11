@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.http import require_GET
-
+from sqlService.helper import PostHelper
 from django.core.paginator import Paginator
 
 @require_GET
@@ -18,23 +18,22 @@ def select_page(request):
 pageSize = 3
 @require_GET
 def post_page(request, pageNumber = 1, category = 'all', sortBy = 'newest'):
-    # allPost = Post.objects.all()
-    # paginator = Paginator(allPost, pageSize)
-    # totalPage = paginator.num_pages
-    # minPage = max(pageNumber - 2, 1)
-    # maxPage = min(pageNumber + 2, totalPage)
-    # rangePage = range(minPage, maxPage+1)
-    # posts = paginator.get_page(pageNumber)
-    return render(request, 'post-page.html', {})
-    # return render(request, 'post-page.html', {
-    #     "posts" : posts,
-    #     "rangePage": rangePage,
-    #     'currentPage': pageNumber
-    # })
+    posts = PostHelper.getAll(pageNumber, category, sortBy)
+    paginator = Paginator(posts, pageSize)
+    totalPage = paginator.num_pages
+    minPage = max(pageNumber - 2, 1)                                              
+    maxPage = min(pageNumber + 2, totalPage)
+    rangePage = range(minPage, maxPage+1)
+    postInPage = paginator.get_page(pageNumber)
+    return render(request, 'post-page.html', {
+        "posts" : postInPage,
+        "rangePage": rangePage,
+        'currentPage': pageNumber
+    })
 
 @require_GET
 def post_view_page(request, postId):
-    post = None #Post.objects.get(id = postId)
+    post = PostHelper.getById(postId)
     data = {
         "post" : post
     }
