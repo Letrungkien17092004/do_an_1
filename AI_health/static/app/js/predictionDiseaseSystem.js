@@ -48,11 +48,23 @@ export class PredictTypeSelect extends PredictionDiseaseSystem {
     renderResult(data) {
         this.resultName.innerHTML = data.disease.name
         this.resultDiscription.innerHTML = data.disease.discription
-        this.resultFood.innerHTML = data.prescription.foodDiscription
-        this.renderMedicines(data.medicines)
-        // show container
+        if (data["prescript-Medicine"].length > 0) {
+            let prescriptMedicine = data["prescript-Medicine"][0]
+            this.resultFood.innerHTML = prescriptMedicine.prescription.foodDiscription
+            this.renderMedicines(prescriptMedicine.medicines)
+        }
         this.showContainer()
         
+    }
+
+    renderError(data) {
+        if (data == "ZERO-IMPORTANT") {
+            let p1 = "Không có triệu chứng nào quan trọng.\n"
+            let p2 = "Các triệu chứng bạn đã chọn khá thông thường vui lòng chọn thêm!"
+            alert(
+                p1 + p2
+            )
+        }
     }
 
     renderMedicines(medicines) {
@@ -66,7 +78,7 @@ export class PredictTypeSelect extends PredictionDiseaseSystem {
             `
             <div class="medicine-cards-image">
                 <!-- Image here -->
-                <img src="${medicine.image}" alt="">
+                <img src="${medicine.url}" alt="">
             </div>
             <div class="medicine-cards-name">
                 <!-- Name here -->
@@ -85,7 +97,11 @@ export class PredictTypeSelect extends PredictionDiseaseSystem {
             let values = thisParent.selectedList.getValues()
             var resData = await thisParent.predictServer(values)
             if (resData.status == 200) {
-                thisParent.renderResult(resData)
+                if (resData.message == "BAD") {
+                    thisParent.renderError(resData.data)
+                } else {
+                    thisParent.renderResult(resData.data)
+                }
             } else {
                 window.alert("Hệ Thống đang bận. Vui lòng thử lại sau !")
             }

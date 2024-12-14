@@ -1,10 +1,45 @@
 # Create your helper here
-from .models import Diseases, Post, Categories
-
+from .models import Diseases, Post, Categories, Medicines
+from django.forms.models import model_to_dict
 class DiseaseHelper:
     def getDiseaseInfo(diseaseName):
-        medicine = Diseases.objects.get(searchName = diseaseName)
-        return medicine
+        if not DiseaseHelper.isExitsWithSearchName(diseaseName):
+            return "Disease is not found"
+        disease = Diseases.objects.get(searchName = diseaseName)
+        prescriptions = disease.prescriptions.all()
+        prescriptWithMedicine = []
+
+        for prescript in prescriptions:
+            medicines = Medicines.objects.filter(prescription_medicines__prescriptionId__id = prescript.id)
+            prescriptDict = {
+                "name": prescript.name,
+                "foodDiscription": prescript.foodDiscription,
+            }
+            medicineDicts = [
+                {
+                    "name": medicine.name, 
+                    "info": medicine.info, 
+                    "price": medicine.price,
+                    "url": medicine.image_theme.url,
+                    "links": medicine.links
+                } 
+                for medicine in  medicines
+                ]
+            prescriptWithMedicine.append({
+                "prescription": prescriptDict,
+                "medicines": medicineDicts
+            })
+        diseaseDict = {
+            "name": disease.name,
+            "discription": disease.discription,
+            "postLinks": disease.postLinks,
+        }
+        return {
+            "disease": diseaseDict,
+            "prescript-Medicine": prescriptWithMedicine
+        }
+    def isExitsWithSearchName(searchName):
+        return Diseases.objects.filter(searchName = searchName).exists()
     
 class PostHelper:
     def getAll(pageNumber = 1, category = 'all', sortBy = 'newest'):

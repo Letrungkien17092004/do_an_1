@@ -66,8 +66,8 @@ class Medicines(models.Model):
         return self.name
     
 class Prescription_medicines(models.Model):
-    prescriptionId = models.ForeignKey(Prescriptions, on_delete=models.CASCADE, related_name="prescription")
-    medicineId = models.ForeignKey(Medicines, on_delete=models.CASCADE, related_name="medicine")
+    prescriptionId = models.ForeignKey(Prescriptions, on_delete=models.CASCADE, related_name="prescription_medicines")
+    medicineId = models.ForeignKey(Medicines, on_delete=models.CASCADE, related_name="prescription_medicines")
     class Meta:
             unique_together = ('prescriptionId', 'medicineId')
     def __str__(self):
