@@ -1,7 +1,7 @@
-
 :root {
     --base-col: 8.3333%;
 }
+
 .grid {
     display: block;
     width: 100%;
@@ -36,35 +36,274 @@
     padding-right: 0;
 }
 
-.l-0 {
-    display: none;
+/* xs (extra small) breakpoint */
+@media (min-width: 375px) {
+
+    .xs-0 {
+        display: none;
+    }
+
+    .xs-1 {
+        flex: 0 0 calc(var(--base-col) * 1);
+        max-width: calc(var(--base-col) * 1);
+    }
+
+    .xs-2 {
+        flex: 0 0 calc(var(--base-col) * 2);
+        max-width: calc(var(--base-col) * 2);
+    }
+
+    .xs-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .xs-4 {
+        flex: 0 0 calc(var(--base-col) * 4);
+        max-width: calc(var(--base-col) * 4);
+    }
+
+    .xs-5 {
+        flex: 0 0 calc(var(--base-col) * 5);
+        max-width: calc(var(--base-col) * 5);
+    }
+
+    .xs-6 {
+        flex: 0 0 calc(var(--base-col) * 6);
+        max-width: calc(var(--base-col) * 6);
+    }
+
+    .xs-7 {
+        flex: 0 0 calc(var(--base-col) * 7);
+        max-width: calc(var(--base-col) * 7);
+    }
+
+    .xs-8 {
+        flex: 0 0 calc(var(--base-col) * 8);
+        max-width: calc(var(--base-col) * 8);
+    }
+
+    .xs-9 {
+        flex: 0 0 calc(var(--base-col) * 9);
+        max-width: calc(var(--base-col) * 9);
+    }
+
+    .xs-10 {
+        flex: 0 0 calc(var(--base-col) * 10);
+        max-width: calc(var(--base-col) * 10);
+    }
+
+    .xs-11 {
+        flex: 0 0 calc(var(--base-col) * 11);
+        max-width: calc(var(--base-col) * 11);
+    }
+
+    .xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
-.l-1 {
-    flex: 0 0 calc(var(--base-col) * 1);
-    max-width: calc(var(--base-col) * 1);
+/* S breakpoint */
+@media (min-width: 576px) {
+
+    .s-0 {
+        display: none;
+    }
+
+    .s-1 {
+        flex: 0 0 calc(var(--base-col) * 1);
+        max-width: calc(var(--base-col) * 1);
+    }
+
+    .s-2 {
+        flex: 0 0 calc(var(--base-col) * 2);
+        max-width: calc(var(--base-col) * 2);
+    }
+
+    .s-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .s-4 {
+        flex: 0 0 calc(var(--base-col) * 4);
+        max-width: calc(var(--base-col) * 4);
+    }
+
+    .s-5 {
+        flex: 0 0 calc(var(--base-col) * 5);
+        max-width: calc(var(--base-col) * 5);
+    }
+
+    .s-6 {
+        flex: 0 0 calc(var(--base-col) * 6);
+        max-width: calc(var(--base-col) * 6);
+    }
+
+    .s-7 {
+        flex: 0 0 calc(var(--base-col) * 7);
+        max-width: calc(var(--base-col) * 7);
+    }
+
+    .s-8 {
+        flex: 0 0 calc(var(--base-col) * 8);
+        max-width: calc(var(--base-col) * 8);
+    }
+
+    .s-9 {
+        flex: 0 0 calc(var(--base-col) * 9);
+        max-width: calc(var(--base-col) * 9);
+    }
+
+    .s-10 {
+        flex: 0 0 calc(var(--base-col) * 10);
+        max-width: calc(var(--base-col) * 10);
+    }
+
+    .s-11 {
+        flex: 0 0 calc(var(--base-col) * 11);
+        max-width: calc(var(--base-col) * 11);
+    }
+
+    .s-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
-.l-2 {
-    flex: 0 0 calc(var(--base-col) * 2);
-    max-width: calc(var(--base-col) * 2);
+
+/* M breakpoint */
+@media (min-width: 768px) {
+
+    .m-0 {
+        display: none;
+    }
+
+    .m-1 {
+        flex: 0 0 calc(var(--base-col) * 1);
+        max-width: calc(var(--base-col) * 1);
+    }
+
+    .m-2 {
+        flex: 0 0 calc(var(--base-col) * 2);
+        max-width: calc(var(--base-col) * 2);
+    }
+
+    .m-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .m-4 {
+        flex: 0 0 calc(var(--base-col) * 4);
+        max-width: calc(var(--base-col) * 4);
+    }
+
+    .m-5 {
+        flex: 0 0 calc(var(--base-col) * 5);
+        max-width: calc(var(--base-col) * 5);
+    }
+
+    .m-6 {
+        flex: 0 0 calc(var(--base-col) * 6);
+        max-width: calc(var(--base-col) * 6);
+    }
+
+    .m-7 {
+        flex: 0 0 calc(var(--base-col) * 7);
+        max-width: calc(var(--base-col) * 7);
+    }
+
+    .m-8 {
+        flex: 0 0 calc(var(--base-col) * 8);
+        max-width: calc(var(--base-col) * 8);
+    }
+
+    .m-9 {
+        flex: 0 0 calc(var(--base-col) * 9);
+        max-width: calc(var(--base-col) * 9);
+    }
+
+    .m-10 {
+        flex: 0 0 calc(var(--base-col) * 10);
+        max-width: calc(var(--base-col) * 10);
+    }
+
+    .m-11 {
+        flex: 0 0 calc(var(--base-col) * 11);
+        max-width: calc(var(--base-col) * 11);
+    }
+
+    .m-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
-.l-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-}
+/* L breakpoint */
+@media (min-width: 992px) {
+    .l-0 {
+        display: none;
+    }
 
-.l-4 {
-    flex: 0 0 calc(var(--base-col) * 4);
-    max-width: calc(var(--base-col) * 4);
-}
+    .l-1 {
+        flex: 0 0 calc(var(--base-col) * 1);
+        max-width: calc(var(--base-col) * 1);
+    }
 
-.l-6 {
-    flex: 0 0 50%;
-}
+    .l-2 {
+        flex: 0 0 calc(var(--base-col) * 2);
+        max-width: calc(var(--base-col) * 2);
+    }
 
-.l-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
+    .l-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .l-4 {
+        flex: 0 0 calc(var(--base-col) * 4);
+        max-width: calc(var(--base-col) * 4);
+    }
+
+    .l-5 {
+        flex: 0 0 calc(var(--base-col) * 5);
+        max-width: calc(var(--base-col) * 5);
+    }
+
+    .l-6 {
+        flex: 0 0 calc(var(--base-col) * 6);
+        max-width: calc(var(--base-col) * 6);
+    }
+
+    .l-7 {
+        flex: 0 0 calc(var(--base-col) * 7);
+        max-width: calc(var(--base-col) * 7);
+    }
+
+    .l-8 {
+        flex: 0 0 calc(var(--base-col) * 8);
+        max-width: calc(var(--base-col) * 8);
+    }
+
+    .l-9 {
+        flex: 0 0 calc(var(--base-col) * 9);
+        max-width: calc(var(--base-col) * 9);
+    }
+
+    .l-10 {
+        flex: 0 0 calc(var(--base-col) * 10);
+        max-width: calc(var(--base-col) * 10);
+    }
+
+    .l-11 {
+        flex: 0 0 calc(var(--base-col) * 11);
+        max-width: calc(var(--base-col) * 11);
+    }
+
+    .l-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

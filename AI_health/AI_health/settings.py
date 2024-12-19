@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-*pr(chim6ydix6)0$!(z#_3nrqy3i)oqg5j48$dsyc-9oz(yr&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "172.20.10.4",
+    "127.0.0.1"
+]
 
 
 # Application definition
@@ -36,7 +39,7 @@ INSTALLED_APPS = [
     'sqlService.apps.SqlserviceConfig', # sql (interact with sqlite3)
     'chatBotService.apps.ChatbotserviceConfig', # chatBotService
     'predictService.apps.PredictserviceConfig', # predict system
-
+    'medicineService.apps.MedicineserviceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

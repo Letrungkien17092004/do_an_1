@@ -6,14 +6,14 @@ window.addEventListener("load", async () => {
         history.back()
     })
 
-    const navbar = document.getElementById("main-navbar")
-    const triggerScrollHeight = 100
+    // const navbar = document.getElementById("main-navbar")
+    // const triggerScrollHeight = 100
 
-    window.addEventListener("scroll", () => {
-        if (window.screenY > triggerScrollHeight) {
-            navbar.classList.add("fixed")
-        } else {
-            navbar.classList.remove("fixed")
-        }
-    })
+    // window.addEventListener("scroll", () => {
+    //     if (window.screenY > triggerScrollHeight) {
+    //         navbar.classList.add("fixed")
+    //     } else {
+    //         navbar.classList.remove("fixed")
+    //     }
+    // })
 })

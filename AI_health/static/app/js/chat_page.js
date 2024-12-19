@@ -108,6 +108,7 @@ class ChatManager {
                 this.addMessage("Vui lòng cung cấp các triệu chứng!", "bot")
                 break;
             default:
+                this.addMessage("Đã có lỗi sảy ra! vui lòng thử lại sau", "bot")
                 break;
         }
     }

@@ -55,3 +55,11 @@
 #previous-page:hover {
     filter: brightness(80%);
 }
+
+.blockContentV2 {
+    width: 80vw;
+    margin: 0 auto;
+    height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

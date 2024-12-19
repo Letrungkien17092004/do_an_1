@@ -33,7 +33,8 @@ def predictMassage(request):
             else:
 
                 data = DiseaseHelper.getDiseaseInfo(result.lower())
-                if data == "Disease is not found": raise "Server logic error"
+                print(result.lower())
+                if data == "Disease is not found": raise BaseException("Server logic error")
                 res['status'] = "OK"
                 res["message"] = "predict successful"
                 res["data"] = data
@@ -43,7 +44,7 @@ def predictMassage(request):
         res["message"] = chatResponse
         res['type'] = 'ONLY-CHAT'
         return JsonResponse(res)
-    except RuntimeError as error:
+    except BaseException as error:
         print(error)
         res = {
             "message" : "Server error",

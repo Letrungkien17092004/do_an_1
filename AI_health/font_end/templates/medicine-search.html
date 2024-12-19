@@ -1,0 +1,183 @@
+{% extends 'base_ui.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tra cứu thuốc{% endblock %}</title>
+    {% block importCSS %}
+    <link rel="stylesheet" href="{% static 'app/css/medicine_search.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/common.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block contentV2 %}
+    <div class="main-content">
+        <div id="tab-select" class="">
+            <div class="grid">
+                <div class="row no-gutters">
+                    <div class="col l-6 m-6 s-12 xs-12">
+                        <div class="select-image container center-child">
+                            <div class="select-box">
+                                <input style="display: none;" type="file" name="" id=""> <!-- Ẩn -->
+                                <div id="chooseFile" class="btn btn-color-theme">Chọn file</div>
+                                <div id="capture" class="btn btn-color-theme">Chụp ảnh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 s-12 xs-12">
+                        <div id="preview">
+                            <div id="preview-container">
+                                <div class="header header-fit">
+                                    <div class="text text-normal">Ảnh đã chọn</div>
+                                </div>
+                                <img id="preview-image" src="/static/images/medicines/1_Rifampicin.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col xs-12">
+                        <div class="container center-child">
+                            <div id="action-search">
+                                <div class="btn btn-color-theme">
+                                    <div class="text">
+                                        Tra cứu
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab-result" class="tab-hiden">
+            <div class="grid">
+                <div class="row">
+                    <div class="col xs-12">
+                        <div class="container">
+                            <div id="previous-action" class="btn btn-color-theme">
+                                <span class="text">Quay lại</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l-4 m-5 s-12 xs-12">
+                        <div id="wasFound">
+                            <div class="header">
+                                <div class="text text-normal">Kết quả được tìm thấy</div>
+                            </div>
+                            <div class="medicine-card">
+                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
+                                <div class="medicine-info">
+                                    <div class="medicine-info-title">Thuốc chống nôn</div>
+                                    <div class="medicine-info-price">
+                                        Giá tham khảo:
+                                        <span class="medicine-info-price-highlight">199.000 VND</span>
+                                    </div>
+                                    <div class="medicine-info-discrible">
+                                        <p class="text">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur velit
+                                            eius sint expedita nulla blanditiis porro dignissimos aspernatur numquam,
+                                            accusamus asperiores odio sapiente, neque tenetur eos. Natus nisi tenetur
+                                            explicabo?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="medicine-link">
+                                    <a href="#">
+                                        <div class="btn btn-color-theme">
+                                            Xem tại hiệu thuốc
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-8 m-7 s-12 xs-12">
+                        <div id="recommends">
+                            <div class="header">
+                                <span class="text">Tham khảo thêm</span>
+                            </div>
+                            <div id="recommends-list">
+                                <div class="grid">
+                                    <div class="row">
+                                        <div class="col l-3 m-6 s-12 xs-12">
+                                            <div class="medicine-card">
+                                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
+                                                <div class="medicine-info">
+                                                    <div class="medicine-info-title">Thuốc chống nôn</div>
+                                                    <div class="medicine-info-price">
+                                                        Giá tham khảo:
+                                                        <span class="medicine-info-price-highlight">199.000 VND</span>
+                                                    </div>
+                                                </div>
+                                                <div class="medicine-link">
+                                                    <a href="#">
+                                                        <div class="btn btn-color-theme">
+                                                            Xem tại hiệu thuốc
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col l-3 m-6 s-12 xs-12">
+                                            <div class="medicine-card">
+                                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
+                                                <div class="medicine-info">
+                                                    <div class="medicine-info-title">Thuốc chống nôn</div>
+                                                    <div class="medicine-info-price">
+                                                        Giá tham khảo:
+                                                        <span class="medicine-info-price-highlight">199.000 VND</span>
+                                                    </div>
+                                                </div>
+                                                <div class="medicine-link">
+                                                    <a href="#">
+                                                        <div class="btn btn-color-theme">
+                                                            Xem tại hiệu thuốc
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col l-3 m-6 s-12 xs-12">
+                                            <div class="medicine-card">
+                                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
+                                                <div class="medicine-info">
+                                                    <div class="medicine-info-title">Thuốc chống nôn</div>
+                                                    <div class="medicine-info-price">
+                                                        Giá tham khảo:
+                                                        <span class="medicine-info-price-highlight">199.000 VND</span>
+                                                    </div>
+                                                </div>
+                                                <div class="medicine-link">
+                                                    <a href="#">
+                                                        <div class="btn btn-color-theme">
+                                                            Xem tại hiệu thuốc
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block importJS %}
+    <script type="module" src="{% static '/static/app/js/medicine_search.js' %}"></script>
+    {% endblock %}
+</body>
+
+</html>

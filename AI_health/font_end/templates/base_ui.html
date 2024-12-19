@@ -31,8 +31,13 @@
         </div>
     </div>
     {% block content %}
-
     {% endblock %}
+
+    
+    <div class="blockContentV2">
+        {% block contentV2 %}
+        {% endblock %}
+    </div>
 
     <script src="{% static 'app/js/navbar.js' %}"></script>
     {% block importJS %} {% endblock %}

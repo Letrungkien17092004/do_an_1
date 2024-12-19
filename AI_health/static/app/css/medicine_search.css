@@ -1,0 +1,130 @@
+.main-content {
+    margin-top: 24px;
+    width: 100%;
+}
+
+.select-image {
+    font-size: 1.4rem;
+    height: 100px;
+}
+
+#chooseFile {
+    margin-bottom: 12px;
+}
+
+/* preview */
+#preview {
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+#preview-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-image {
+    object-fit: contain;
+    width: 200px;
+}
+
+/* submit */ 
+#action-search {
+    padding: 8px 12px;
+}
+
+/* tab */
+#tab-select {
+    font-size: 1.8rem;
+}
+
+.tab-hiden {
+    display: none;
+}
+
+#tab-result .row {
+    margin-top: 12px;
+}
+
+
+/* wasfound window */
+
+#previous-action {
+    font-size: 1.2rem;
+}
+
+#wasFound {
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+#wasFound .header div.text.text-normal {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* medicine card */
+
+#wasFound .medicine-card {
+    font-size: 1.6rem;
+}
+
+.medicine-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 60%;
+}
+
+.medicine-info {
+    padding: 4px 12px;
+}
+
+.medicine-info-title {
+    font-size: initial;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.medicine-info-price-highlight {
+    color: rgb(255, 89, 0);
+}
+
+.medicine-info-discrible .text {
+    text-align: justify;
+    font-size: 1.2rem;
+    color: rgb(90, 80, 80);
+}
+
+.medicine-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medicine-link a {
+    text-decoration: none;
+    display: block;
+
+}
+
+/* recommends */
+#recommends .medicine-card {
+    font-size: 1.2rem;
+}
+
+#recommends .medicine-info {
+    font-size: 1.4rem;
+}
+#recommends {
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    font-size: 1.8rem;
+    text-align: center;
+}

@@ -10,16 +10,19 @@
 
     {% block importCSS %}
     <link rel="stylesheet" href="{% static 'app/css/select_page.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/common.css' %}">
     <link rel="stylesheet" href="{% static 'app/css/grid.css' %}">
     {% endblock %}
 </head>
 
 <body>
-    {% block content %}
+    {% block contentV2 %}
     <div class="selected-container">
         <!-- Header -->
         <div class="selected_header">
-            <span class="text text-black fz-26 w-700">Chọn triệu chứng</span>
+            <div class="header header-fit">
+                <div class="text">Chọn các triệu chứng</div>
+            </div>
         </div>
         <div class="dash-line das-color-theme"></div>
         <!-- selected symptom list -->
@@ -100,6 +103,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Choose Symptom display -->
     <div id="select-overlay" class="over-display hiden bg-dark-0">
         <div class="over_container bg-white-0">

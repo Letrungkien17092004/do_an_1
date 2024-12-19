@@ -1,4 +1,8 @@
 :root {
+
+    /* Theme color */
+    --theme-color: #06A10B;
+
     /* Green scheme */
     --theme-green-1: #88D969;
     --theme-green-2: #46CB18;
