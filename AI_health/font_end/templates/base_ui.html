@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'app/imgs/logo_humg.jpg' %}" type="image/x-icon">
     <title>{% block title %} {% endblock %}</title>
-    
+    <link rel="stylesheet" href="{% static 'app/css/grid.css' %}">
     <link rel="stylesheet" href="{% static 'app/css/root.css' %}">
     <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}">
     {% block importCSS %} {% endblock %}
@@ -14,19 +14,26 @@
 <body>
     <div id="main-navbar" class="navbar">
         <div class="navbar_container">
-            <div class="navbar_items left">
-                <a id="previous-page" class="text fz-16" >Trang trước</a>
-            </div>
-
-            
-            <div class="navbar_items center">
-                <span class="text text-white fz-18 w-700">HUMG disease prediction system</span>
-            </div>
-
-            <div class="navbar_items right">
-                <a href="/">
-                    <img id="img-logo" src="{% static 'app/imgs/house-solid.svg' %}" alt="Home">
-                </a>
+            <div class="grid">
+                <div class="row">
+                    <div class="col xs-6 s-6 m-3 l-3">
+                        <div class="navbar_items">
+                            <a id="previous-page" class="text fz-16" >Trang trước</a>
+                        </div>
+                    </div>
+                    <div class="col xs-0 s-0 m-6 l-6">
+                        <div class="navbar_items">
+                            <span class="text text-white fz-18 w-700">HUMG disease prediction system</span>
+                        </div>
+                    </div>
+                    <div class="col xs-6 s-6 m-3 l-3">
+                        <div class="navbar_items">
+                            <a href="/">
+                                <img id="img-logo" src="{% static '/static/app/imgs/house-solid.svg' %}" alt="Home">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

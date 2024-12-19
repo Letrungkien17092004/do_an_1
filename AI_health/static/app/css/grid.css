@@ -44,56 +44,67 @@
     }
 
     .xs-1 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 1);
         max-width: calc(var(--base-col) * 1);
     }
 
     .xs-2 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 2);
         max-width: calc(var(--base-col) * 2);
     }
 
     .xs-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        display: initial;
+        flex: 0 0 calc(var(--base-col) * 3);
+        max-width: calc(var(--base-col) * 3);
     }
 
     .xs-4 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 4);
         max-width: calc(var(--base-col) * 4);
     }
 
     .xs-5 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 5);
         max-width: calc(var(--base-col) * 5);
     }
 
     .xs-6 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 6);
         max-width: calc(var(--base-col) * 6);
     }
 
     .xs-7 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 7);
         max-width: calc(var(--base-col) * 7);
     }
 
     .xs-8 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 8);
         max-width: calc(var(--base-col) * 8);
     }
 
     .xs-9 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 9);
         max-width: calc(var(--base-col) * 9);
     }
 
     .xs-10 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 10);
         max-width: calc(var(--base-col) * 10);
     }
 
     .xs-11 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 11);
         max-width: calc(var(--base-col) * 11);
     }
@@ -112,56 +123,67 @@
     }
 
     .s-1 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 1);
         max-width: calc(var(--base-col) * 1);
     }
 
     .s-2 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 2);
         max-width: calc(var(--base-col) * 2);
     }
 
     .s-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        display: initial;
+        flex: 0 0 calc(var(--base-col) * 3);
+        max-width: calc(var(--base-col) * 3);
     }
 
     .s-4 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 4);
         max-width: calc(var(--base-col) * 4);
     }
 
     .s-5 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 5);
         max-width: calc(var(--base-col) * 5);
     }
 
     .s-6 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 6);
         max-width: calc(var(--base-col) * 6);
     }
 
     .s-7 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 7);
         max-width: calc(var(--base-col) * 7);
     }
 
     .s-8 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 8);
         max-width: calc(var(--base-col) * 8);
     }
 
     .s-9 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 9);
         max-width: calc(var(--base-col) * 9);
     }
 
     .s-10 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 10);
         max-width: calc(var(--base-col) * 10);
     }
 
     .s-11 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 11);
         max-width: calc(var(--base-col) * 11);
     }
@@ -181,56 +203,67 @@
     }
 
     .m-1 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 1);
         max-width: calc(var(--base-col) * 1);
     }
 
     .m-2 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 2);
         max-width: calc(var(--base-col) * 2);
     }
 
     .m-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        display: initial;
+        flex: 0 0 calc(var(--base-col) * 3);
+        max-width: calc(var(--base-col) * 3);
     }
 
     .m-4 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 4);
         max-width: calc(var(--base-col) * 4);
     }
 
     .m-5 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 5);
         max-width: calc(var(--base-col) * 5);
     }
 
     .m-6 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 6);
         max-width: calc(var(--base-col) * 6);
     }
 
     .m-7 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 7);
         max-width: calc(var(--base-col) * 7);
     }
 
     .m-8 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 8);
         max-width: calc(var(--base-col) * 8);
     }
 
     .m-9 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 9);
         max-width: calc(var(--base-col) * 9);
     }
 
     .m-10 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 10);
         max-width: calc(var(--base-col) * 10);
     }
 
     .m-11 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 11);
         max-width: calc(var(--base-col) * 11);
     }
@@ -248,56 +281,67 @@
     }
 
     .l-1 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 1);
         max-width: calc(var(--base-col) * 1);
     }
 
     .l-2 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 2);
         max-width: calc(var(--base-col) * 2);
     }
 
     .l-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        display: initial;
+        flex: 0 0 calc(var(--base-col) * 3);
+        max-width: calc(var(--base-col) * 3);
     }
 
     .l-4 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 4);
         max-width: calc(var(--base-col) * 4);
     }
 
     .l-5 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 5);
         max-width: calc(var(--base-col) * 5);
     }
 
     .l-6 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 6);
         max-width: calc(var(--base-col) * 6);
     }
 
     .l-7 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 7);
         max-width: calc(var(--base-col) * 7);
     }
 
     .l-8 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 8);
         max-width: calc(var(--base-col) * 8);
     }
 
     .l-9 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 9);
         max-width: calc(var(--base-col) * 9);
     }
 
     .l-10 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 10);
         max-width: calc(var(--base-col) * 10);
     }
 
     .l-11 {
+        display: initial;
         flex: 0 0 calc(var(--base-col) * 11);
         max-width: calc(var(--base-col) * 11);
     }
