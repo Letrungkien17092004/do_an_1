@@ -2,20 +2,21 @@
 
 #chat-container {
     min-height: 70vh;
-    /* max-height: 80vh; */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-
-
 .chat-message-container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-left: 24px;
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 24px;
     flex-grow: 1;
     margin-top: 24px;
 }

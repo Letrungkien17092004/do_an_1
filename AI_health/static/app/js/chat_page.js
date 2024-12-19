@@ -28,6 +28,10 @@ class ChatManager {
 
         newMessage.appendChild(newMessageText)
         this.messContainer.append(newMessage)
+        newMessage.scrollIntoView({
+            behavior: "smooth"
+        }
+        )
     }
 
     async postMessage(message) {
@@ -149,7 +153,6 @@ class ChatManager {
             event.stopPropagation()
             this.style.height = `${thisParrent.areaSetting.heightTrigger}px`;
             this.style.height = (this.scrollHeight) + "px";
-            this.scrollIntoView()
         }
     }
 }
