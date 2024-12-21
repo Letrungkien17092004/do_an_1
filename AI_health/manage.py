@@ -7,6 +7,7 @@ import sys
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AI_health.settings')
+    os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

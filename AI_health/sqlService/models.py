@@ -62,7 +62,7 @@ class Medicines(models.Model):
     price = models.IntegerField(null=True, blank=True)
     image_theme = models.ImageField(upload_to="static/images/medicines/", null=True, blank=True)
     links = models.JSONField(null=True, blank=True)
-    vector = models.TextField(default="", null=True, blank=True)
+    vector = models.JSONField(default=list, null=True, blank=True)
     def __str__(self):
         return self.name
     

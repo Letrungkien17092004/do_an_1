@@ -1,8 +1,8 @@
 # Create your helper here
-from .models import Diseases, Post, Categories, Medicines
-from django.forms.models import model_to_dict
+from .models import Diseases, Post, Categories, Medicines, MedicineImages
+from django.shortcuts import get_object_or_404
 class DiseaseHelper:
-    def getDiseaseInfo(diseaseName):
+    def getDiseaseInfo(self, diseaseName):
         if not DiseaseHelper.isExitsWithSearchName(diseaseName):
             return "Disease is not found"
         disease = Diseases.objects.get(searchName = diseaseName)
@@ -38,11 +38,11 @@ class DiseaseHelper:
             "disease": diseaseDict,
             "prescript-Medicine": prescriptWithMedicine
         }
-    def isExitsWithSearchName(searchName):
+    def isExitsWithSearchName(self, searchName):
         return Diseases.objects.filter(searchName = searchName).exists()
     
 class PostHelper:
-    def getAll(pageNumber = 1, category = 'all', sortBy = 'newest'):
+    def getAll(self, pageNumber = 1, category = 'all', sortBy = 'newest'):
         posts = Post.objects.all()
         if category != "all":
             posts = posts.filter(post_categories__categoryId__categoryName=category)
@@ -51,7 +51,7 @@ class PostHelper:
         elif sortBy == "oldest":
             posts = posts.order_by("created_at")
         return posts
-    def getById(postId):
+    def getById(self, postId):
         post = Post.objects.get(id = postId)
         return post
 
@@ -59,4 +59,24 @@ class CategoriesHelper:
     def getAll():
         categories = Categories.objects.all()
         return categories
+
+class MedicineHelper:
+    def getAllMedicine():
+        medicines = Medicines.objects.all()
+        return medicines
+    def getById(medicineId):
+        medicine = get_object_or_404(Medicines, id = medicineId)
+        return medicine
+    
+    def getImageOfMedicine(medicineId, hasTrained = False):
+        medicine = get_object_or_404(Medicines, id = medicineId)
+        images = medicine.images.filter(hasTrained=hasTrained)
+        return images
+    def getImageById(imageId):
+        image = MedicineImages.objects.get(id = imageId)
+        return image
+    def setImageHasTrained(imageId, hasTrained):
+        image = MedicineImages.objects.get(id = imageId)
+        image.hasTrained = hasTrained
+        image.save()
 

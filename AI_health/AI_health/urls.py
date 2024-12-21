@@ -23,6 +23,7 @@ urlpatterns = [
 
     path("api/predict/v1/", include("predictService.urls")),
     path("api/sql/", include("sqlService.urls")),
+    path("api/medicineService/", include("medicineService.urls")),
 
     path('admin/', admin.site.urls),
 ]  + static("static/", document_root = "static")
