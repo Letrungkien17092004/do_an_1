@@ -23,7 +23,7 @@
                     <div class="col l-6 m-6 s-12 xs-12">
                         <div class="select-image container center-child">
                             <div class="select-box">
-                                <input style="display: none;" type="file" name="" id=""> <!-- Ẩn -->
+                                <input style="display: none;" type="file" name="imageInput" id="imageInput"> <!-- Ẩn -->
                                 <div id="chooseFile" class="btn btn-color-theme">Chọn file</div>
                                 <div id="capture" class="btn btn-color-theme">Chụp ảnh</div>
                             </div>
@@ -35,7 +35,7 @@
                                 <div class="header header-fit">
                                     <div class="text text-normal">Ảnh đã chọn</div>
                                 </div>
-                                <img id="preview-image" src="/static/images/medicines/1_Rifampicin.jpg" alt="">
+                                <img id="preview-image" src="\static\images\default\default_recognite.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -72,8 +72,9 @@
                             <div class="header">
                                 <div class="text text-normal">Kết quả được tìm thấy</div>
                             </div>
-                            <div class="medicine-card">
-                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
+                            <div id="mainMedicine" class="medicine-card">
+                                <!-- <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');"
+                                    class="medicine-image"></div>
                                 <div class="medicine-info">
                                     <div class="medicine-info-title">Thuốc chống nôn</div>
                                     <div class="medicine-info-price">
@@ -95,7 +96,7 @@
                                             Xem tại hiệu thuốc
                                         </div>
                                     </a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -104,12 +105,13 @@
                             <div class="header">
                                 <span class="text">Tham khảo thêm</span>
                             </div>
-                            <div id="recommends-list">
+                            <div class="container">
                                 <div class="grid">
-                                    <div class="row">
-                                        <div class="col l-3 m-6 s-12 xs-12">
+                                    <div id = "recommends-list" class="row">
+                                        <!-- <div class="col l-3 m-6 s-12 xs-12">
                                             <div class="medicine-card">
-                                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
+                                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');"
+                                                    class="medicine-image"></div>
                                                 <div class="medicine-info">
                                                     <div class="medicine-info-title">Thuốc chống nôn</div>
                                                     <div class="medicine-info-price">
@@ -125,49 +127,20 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col l-3 m-6 s-12 xs-12">
-                                            <div class="medicine-card">
-                                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
-                                                <div class="medicine-info">
-                                                    <div class="medicine-info-title">Thuốc chống nôn</div>
-                                                    <div class="medicine-info-price">
-                                                        Giá tham khảo:
-                                                        <span class="medicine-info-price-highlight">199.000 VND</span>
-                                                    </div>
-                                                </div>
-                                                <div class="medicine-link">
-                                                    <a href="#">
-                                                        <div class="btn btn-color-theme">
-                                                            Xem tại hiệu thuốc
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col l-3 m-6 s-12 xs-12">
-                                            <div class="medicine-card">
-                                                <div style="background-image: url('/static/images/medicines/1_Rifampicin.jpg');" class="medicine-image"></div>
-                                                <div class="medicine-info">
-                                                    <div class="medicine-info-title">Thuốc chống nôn</div>
-                                                    <div class="medicine-info-price">
-                                                        Giá tham khảo:
-                                                        <span class="medicine-info-price-highlight">199.000 VND</span>
-                                                    </div>
-                                                </div>
-                                                <div class="medicine-link">
-                                                    <a href="#">
-                                                        <div class="btn btn-color-theme">
-                                                            Xem tại hiệu thuốc
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab-loading" class="tab-hiden">
+            <div class="container container-full center-child">
+                <div class="loading">
+                    <div class="header">
+                        <div class="text rotating">Vui lòng đợi</div>
                     </div>
                 </div>
             </div>

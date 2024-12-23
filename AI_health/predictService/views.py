@@ -71,7 +71,7 @@ def predictSelect(request):
             return JsonResponse(res)
         
         res['message'] = "OK"
-        res["data"] = DiseaseHelper.getDiseaseInfo(result.lower())
+        res["data"] = DiseaseHelper.getDiseaseInfo(diseaseName=result.lower())
         return JsonResponse(res)
     except RuntimeError as error:
         res = {

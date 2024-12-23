@@ -48,6 +48,10 @@
     margin-top: 12px;
 }
 
+#tab-loading {
+    height: 50vh;
+}
+
 
 /* wasfound window */
 
@@ -127,4 +131,8 @@
     border-radius: 6px;
     font-size: 1.8rem;
     text-align: center;
+}
+
+.loading {
+    font-size: 4rem;
 }

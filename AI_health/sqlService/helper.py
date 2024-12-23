@@ -2,7 +2,7 @@
 from .models import Diseases, Post, Categories, Medicines, MedicineImages
 from django.shortcuts import get_object_or_404
 class DiseaseHelper:
-    def getDiseaseInfo(self, diseaseName):
+    def getDiseaseInfo(diseaseName):
         if not DiseaseHelper.isExitsWithSearchName(diseaseName):
             return "Disease is not found"
         disease = Diseases.objects.get(searchName = diseaseName)
@@ -38,11 +38,11 @@ class DiseaseHelper:
             "disease": diseaseDict,
             "prescript-Medicine": prescriptWithMedicine
         }
-    def isExitsWithSearchName(self, searchName):
+    def isExitsWithSearchName(searchName):
         return Diseases.objects.filter(searchName = searchName).exists()
     
 class PostHelper:
-    def getAll(self, pageNumber = 1, category = 'all', sortBy = 'newest'):
+    def getAll(pageNumber = 1, category = 'all', sortBy = 'newest'):
         posts = Post.objects.all()
         if category != "all":
             posts = posts.filter(post_categories__categoryId__categoryName=category)
@@ -51,7 +51,7 @@ class PostHelper:
         elif sortBy == "oldest":
             posts = posts.order_by("created_at")
         return posts
-    def getById(self, postId):
+    def getById(postId):
         post = Post.objects.get(id = postId)
         return post
 

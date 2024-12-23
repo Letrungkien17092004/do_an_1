@@ -6,7 +6,6 @@ export class TabManager {
     }
 
     showTab(index) {
-        console.log(this.tabs)
         this.tabs.forEach(tab => {
             tab.classList.add(this.classHiden)
         });
